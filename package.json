@@ -1,0 +1,49 @@
+{
+  "name": "gotiqvantica4",
+  "version": "1.0.0",
+  "description": "Gotiqvantita Website by Rina Sestito Arce",
+  "author": "macfly <macfly669@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "acorn": "^6.1.0",
+    "axios": "^0.18.0",
+    "cookieparser": "^0.1.0",
+    "js-cookie": "^2.2.0",
+    "nuxt": "^2.2.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "nuxt-i18n": "^5.8.1",
+    "nuxt-material-design-icons": "^1.0.4",
+    "nuxt-validate": "^0.1.2",
+    "vee-validate": "^2.1.7",
+    "vue-i18n": "^8.8.1",
+    "vue-snotify": "^3.2.1",
+    "vue-social-sharing": "^2.3.4",
+    "vuetify": "^1.5.1",
+    "vuetify-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
+    "acorn-walk": "^6.1.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-imports": "^1.5.1",
+    "eslint": "^5.7.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-html": "^4.0.6",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-i18n-extensions": "^0.2.0"
+  }
+}

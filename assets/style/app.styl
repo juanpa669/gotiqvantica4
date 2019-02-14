@@ -1,0 +1,347 @@
+// Import and define Vuetify color theme
+// https://vuetifyjs.com/en/style/colors
+@require '~vuetify/src/stylus/settings/_colors'
+$theme := {
+  primary:     $blue.darken-2
+  accent:      $blue.accent-2
+  secondary:   $grey.lighten-1
+  info:        $blue.lighten-1
+  warning:     $amber.darken-2
+  error:       $red.accent-4
+  success:     $green.lighten-2
+}
+
+// Import Vuetify styling
+@require '~vuetify/src/stylus/app'
+
+.page
+  @extend .fade-transition
+
+// Custom style
+$body-font-family = 'Raleway Light'
+$alert-font-size = 18px
+$light-blue = '#00bfff'
+// @import '~vuetify/src/stylus/main'
+// For a-la-carte
+@import '~vuetify/src/stylus/app'
+
+@font-face
+  font-family papyrus
+  font-style normal
+  src url(/font/papyrus.ttf)
+// vars
+$custom-font = papyrus
+$my-blue = #00bfff
+// main
+[v-cloak]
+  display none
+
+html, body, #app
+  background-color black!important
+  font-family 'Roboto'!important
+  font-weight lighter
+  background-image url('/img/main/fond/_fond.jpg')
+  background-repeat repeat
+  transition all .6s ease-in
+
+h1, h2, h3, h4, h5, h6, .list__tile__title
+  font-family $custom-font!important
+
+#livre
+  position relative
+  height auto
+  border 2px rgba(187, 211, 245, .35) groove
+  // background-image url('/static/img/main/book/livre-320w.jpg')
+  margin 0 auto
+
+#home-summary
+  background-color transparent!important
+
+#summary, #livre-sumary
+  font-weight lighter
+  font-size 1.4rem
+  text-align justify
+  padding-right .25rem
+  background-color rgba(0, 0, 0, .7)
+
+#livre-summary p.extraits-first:first-letter
+  font-family $custom-font
+  font-size 2.5rem
+  color $my-blue
+
+#livre-retable p.extraits-first:first-letter
+  font-family $custom-font
+  text-align: justify
+  word-break: break-word
+  font-size 2.5rem
+  color $my-blue
+
+.alpha-testimonial
+  &__content
+    align-items flex-start
+    display flex
+    justify-content space-between
+
+  &__footer-bar
+    height 4px
+    margin 20px 0 20px auto
+    width 100px
+
+  .icon
+    justify-content flex-end
+    flex 0 1 10%
+    margin-top -8px
+    transform rotate(180deg)
+
+  p
+    flex 1 1 85%
+    line-height 2
+    font-size 1.6rem
+    font-family $custom-font
+    color $my-blue
+
+  footer
+    flex 1 0 auto
+    text-align right
+
+    .title
+      font-weight 300
+
+  &--dark
+    color #fff
+
+#video-dialog .card__text, #video-dialog .card__title
+  font-family $custom-font!important
+  font-size 1.4rem
+/* Bio */
+.card.bio
+  background-color rgba(0, 0, 0, .30)!important
+
+#bio
+  word-wrap normal
+  text-align justify
+  text-rendering optimizeLegibility
+  font-family 'Roboto'
+  font-size 1.2rem
+  font-weight 100
+  word-wrap break-word
+  text-align justify
+  background-color rgba(0, 0, 0, .5)
+
+#title
+  position relative
+  opacity 1
+/* Excerpt */
+  #livre-bougie
+    width 100%
+    height 480px!important
+    box-shadow 0 0 4px 4px rgba(0,0,0,.63) inset
+    background-image url('/img/main/summary/livrecoeur-320@2x.jpg')
+    background-size cover
+    background-position 25% 50%
+    opacity .5
+
+.extraits
+  font-size 1.2rem
+  font-weight lighter
+  text-align justify
+
+
+p.extraits-first:first-letter
+  color $my-blue
+  font-family $custom-font!important
+  font-size 2.5rem
+
+.extraits-first, ul
+  text-align justify
+  text-rendering optimizeLegibility
+  font-weight lighter
+  font-size 1.2rem
+
+.saut
+  color $my-blue!important
+  font-size 1.6rem
+  font-weight bolder
+li
+  margin-left 1rem!important
+
+/* Form */
+#contact-container:before
+  content ''
+  display block
+  position absolute
+  left 5vw
+  top 0
+  width 95%
+  height 95%
+  z-index 0
+  opacity 0.75!important
+  background-image url('/img/main/contact/chevalier.png')
+  background-repeat no-repeat
+  -ms-background-size cover
+  -o-background-size cover
+  -moz-background-size cover
+  -webkit-background-size cover
+  background-size cover
+  background-position 50% 20%
+
+/* Forum */
+#forum-container:before
+  content ''
+  display block
+  position absolute
+  left 5vw
+  top 0
+  width 50%
+  height 100%
+  z-index 0
+  opacity 0.75!important
+  background-image url('/img/main/contact/chevalier.png')
+  background-repeat no-repeat
+  -ms-background-size cover
+  -o-background-size cover
+  -moz-background-size cover
+  -webkit-background-size cover
+  background-size cover
+  background-position 50% 20%
+
+/* Social */
+.mcSocial
+  position relative
+  font-family papyrus
+  font-size 1.4rem
+  min-width 160px
+  background-color rgba(22, 22, 22, 1)
+  padding 2rem 2rem
+  border-radius 5px
+  left -2rem
+
+.mcSocial i
+  padding-right 1rem
+  color white
+
+.mcSocial p:hover, .mcSocial i:hover
+  color $my-blue
+  cursor pointer
+
+.share-title
+  font-size 1.25rem
+  font-weight bolder
+
+/* Erratum */
+.print
+  display none
+
+div#print-message
+  background-color black!important
+  font-family Roboto
+
+h5.erratum, .erratum i
+  color $my-blue
+  font-weight bolder
+  font-size 1.2rem
+
+.erratum-essage
+  background-color rgba(0, 0, 0, .5)
+  font-size 1.2rem
+  font-style normal
+  text-align justify
+  font-family Arial, Helvetica, sans-serif
+
+#erratum-title
+  top 0
+  margin 0 auto
+  font-size 2rem
+  font-style normal
+  font-weight bolder
+  color aliceblue
+
+#sephirot
+  position relative
+
+/* Drawer router active link */
+.mc-active-class
+  color orange!important
+
+/* moving */
+.mcLeft
+  position absolute
+
+/* appearing */
+.mcLeft-enter-active,
+.mcLeft-leave-active,
+  transition transform 600ms ease-in
+
+/* appear at / disappear to */
+.mcLeft-enter,
+.mcLeft-leave-to
+  transform translateX(-100vw)
+  opacity 0
+
+/* moving */
+.mcRight-enter, .mcRight-leave-to
+  transform translateX(100vw)
+  opacity 0
+
+/* appearing disappearing */
+.mcRight-enter-active,
+.mcRight-leave-active
+  transition transform 800ms .15s ease-out
+
+/* appear at / disappear to */
+.mcRight-enter-to,
+.mcRight-leave
+  transform translateX(0)
+  opacity 1
+
+/* moving */
+.mcScale-enter, .mcScale-leave-to
+  transform scale(0)
+  z-index 0
+
+/* appearing */
+.mcScale-enter-active
+  transition all .6s ease-out .1s
+  animation mcScaleAnim 400ms ease-in-out
+
+@keyframes mcScaleAnim
+  0%
+    transform scale(0)
+
+  100%
+    transform scale(1)
+
+/* disappearing */
+.mcScale-leave-active
+  transition all 600ms .2s ease-out
+  position relative
+
+/* appear at / disappear to */
+.mcScale-enter,
+.mcScale-leave-to
+  transform scale(0)
+  opacity 0
+
+.slide-left-enter-active {
+  transition: all .3s ease;
+}
+.slide-left-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-left-enter, .slide-left-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-right-enter-active {
+  transition: all .6s ease;
+}
+.slide-right-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-right-enter, .slide-right-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(100%);
+  opacity: 0;
+}
