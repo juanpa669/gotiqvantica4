@@ -2,7 +2,7 @@
   v-container.grid-list-md
     v-layout(row justify-center align-center)
       v-flex(xs12 text-xs-center key="titleWrapper")
-        h1(class="headline editor-title") {{ $t('Publisher.title') }}
+        h1(class="headline editor-title") {{ $t('Editor.title') }}
     transition(name="mcScale" appear mode="in-out")
       v-flex(xs12 lg4 offset-lg4 key="tooltpWrapper" text-xs-center)
         v-tooltip(class="editor" top)
@@ -15,11 +15,11 @@
                 width="100%"
               )
 
-          span(v-t="'Publisher.purchase'")
+          span(v-t="'Editor.purchase'")
 
 
           v-flex(xs12 text-xs-center mt-4 key="buttonWrapper")
-            h3(v-t="'Publisher.imgClick'" key="message")
+            h3(v-t="'Editor.imgClick'" key="message")
 </template>
 
 <script>

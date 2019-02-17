@@ -22,7 +22,7 @@ export default ({
   })
   app.i18n.path = (link) => {
     if (app.i18n.locale === app.i18n.fallbackLocale) {
-      return `/${link}`
+      return `/en/${link}`
     }
     return `/${app.i18n.locale}/${link}`
   }

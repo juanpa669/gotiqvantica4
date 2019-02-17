@@ -4,49 +4,49 @@
     "items": [{
         "icon": "bubble_chart",
         "title": "Gotiqvantica",
-        "to": "/",
+        "to": "/fr",
         "name": "home"
       },
       {
         "icon": "face",
         "title": "Auteur",
-        "to": "/author",
+        "to": "/fr/author",
         "name": "author"
       },
       {
         "icon": "chrome_reader_mode",
         "title": "Extraits",
-        "to": "/excerpt",
+        "to": "/fr/excerpt",
         "name": "excerpt"
       },
       {
         "icon": "business",
         "title": "Editeur",
-        "to": "/publisher",
+        "to": "/fr/publisher",
         "name": "publisher"
       },
       {
         "icon": "comment",
         "title": "Forvm",
-        "to": "/forum",
+        "to": "/fr/forum",
         "name": "forum"
       },
       {
         "icon": "contact_mail",
         "title": "Contact",
-        "to": "/contact",
+        "to": "/fr/contact",
         "name": "contact"
       },
       {
         "icon": "error_outline",
         "title": "Erratum",
-        "to": "/erratum",
+        "to": "/fr/erratum",
         "name": "erratum"
       },
       {
         "icon": "library_books",
         "title": "Le retable d’Issenheim",
-        "to": "/retable",
+        "to": "/fr/retable",
         "name": "retable"
       }
     ]

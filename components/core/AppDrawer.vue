@@ -25,7 +25,7 @@
               v-for="(item, i) in items"
               :key="i"
               exact
-              :to="{ path: item.to,  name: item.name,  params: { lang: currentLocale } }"
+              :to="{ path: item.to,  params: { lang: currentLocale } }"
               ripple
               active-class="mc-active-class"
             )

@@ -7,7 +7,7 @@
     "items": [{
         "icon": "bubble_chart",
         "title": "Gotiqvantica - The Book",
-        "to": "/en",
+        "to": "/en/",
         "name": "home"
       },
       {

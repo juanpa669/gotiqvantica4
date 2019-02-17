@@ -37,7 +37,7 @@ module.exports = {
     '~/plugins/fa.js'
   ],
   generate: {
-    routes: ['/', '/home', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/retable', '/en', '/en/home', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/retable', '/fr', '/fr/acceuil', '/fr/auteur', 'fr/resume', '/fr/forum', '/fr/contact', '/fr/editeur']
+    routes: ['/en', '/en/home', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/retable', '/fr', '/fr/acceuil', '/fr/auteur', 'fr/resume', '/fr/forum', '/fr/contact', '/fr/editeur']
   },
   modules: [
     'nuxt-fontawesome',
