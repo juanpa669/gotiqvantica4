@@ -10,8 +10,8 @@
         small ♫ A. Michel &nbsp; &copy;
           a(href='https://zen-waves.com/') https://zen-waves.com
     audio(id="player" controls loop muted autoplay)
-      source(src="media/wave.ogg" type="audio/ogg")
-      source(src="media/wave.mp3" type="audio/mpeg")
+      source(src="http://localhost:3000/media/wave.ogg" type="audio/ogg")
+      source(src="http://localhost:3000/en/media/wave.mp3" type="audio/mpeg")
     div(style="height:7rem")
 </template>
 <script>

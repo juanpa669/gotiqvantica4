@@ -5,11 +5,18 @@
     "website": "Webseite J-Yves HENQUEZ"
   },
   "Toolbar": {
-    "items": [{
-        "icon": "bubble_chart",
-        "title": "Gotiqvantica - Das Buch",
+    "items": [
+      {
+        "icon": "home",
+        "title": "Zuhause",
         "to": "/",
-        "name": "home"
+        "name": "index"
+      },
+      {
+        "icon": "library_books",
+        "title": "Gotiqvantica - Das Buch",
+        "to": "/gotiqvantica",
+        "name": "gotiqvantica"
       },
       {
         "icon": "face",
@@ -127,7 +134,7 @@
       "keywords": "Esoterik, Kathedrale, Gotik, gotische Kathedralen, Alchemie, Quanten, Quantenphysik, Gral, Templer"
     }
   },
-  "Publisher": {
+  "Editor": {
     "title": "Seite des Herausgebers",
     "purchase": "Klicken Sie, um zu kaufen",
     "imgClick": "Auf das Bild klicken, um zur Website des Herausgebers weitergeleitet zu werden",
@@ -192,8 +199,8 @@
   "Home": {
     "pageTitle": "Das title",
     "mainTitle": "Wir alle sind dem Paradies, <br />versprochen und sind alle zum<br />Licht verdammt. So sei es.",
-    "title1": "Das Buch",
-    "sentence1": "Wir alle sind dem Paradies, <br />versprochen und sind alle zum<br />Licht verdammt. So sei es.",
+    "title": "Das Buch",
+    "sentence": "Wir alle sind dem Paradies, <br />versprochen und sind alle zum<br />Licht verdammt. So sei es.",
     "cardTitle": "Im Aufbau",
     "cardText": "Das Video ist in Bearbeitung und wird so schnell wie möglich auf die Seite gestellt",
     "meta": {

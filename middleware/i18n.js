@@ -1,4 +1,4 @@
-const Cookie = require('js-cookie')
+const Cookie = process.client ? require('js-cookie') : undefined
 
 export default function ({
   isHMR,
@@ -9,7 +9,14 @@ export default function ({
   error,
   redirect
 }) {
-  const defaultLocale = Cookie.get('locale') || app.i18n.fallbackLocale
+  let defaultLocale = 'en'
+
+  if (Cookie) {
+    defaultLocale = Cookie.get('locale')
+  } else {
+    defaultLocale = app.i18n.fallbackLocale
+  }
+
   // If middleware is called from hot module replacement, ignore it
   if (isHMR) return
   // Get locale from params
@@ -25,7 +32,7 @@ export default function ({
   app.i18n.locale = store.state.locale
 
   // If route is /<defaultLocale>/... -> redirect to /...
-  if (locale === defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
+  if (locale !== defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
     const toReplace = '^/' + defaultLocale + (route.fullPath.indexOf('/' + defaultLocale + '/') === 0 ? '/' : '')
     const re = new RegExp(toReplace)
     return redirect(

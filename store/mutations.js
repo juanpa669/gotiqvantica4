@@ -8,6 +8,9 @@ const mutations = {
   setLocale (state, payload) {
     state.locale = payload
   },
+  setMessages (state, payload) {
+    state.locale = payload
+  },
   setDrawer (state, payload) {
     state.appDrawer = payload
   },

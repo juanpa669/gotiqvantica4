@@ -13,24 +13,32 @@ v-layout.row
       v-card.justify-center
         v-card-title.mx-5 {{ $t('Dialog.selectCountry') }}
         v-divider
-        v-card-text(style="height:200px;")
-          v-radio-group(v-model="userLocale" column)
-            template(v-for="country in countries ")
-              v-layout.justify-center
-                v-flex.xs6.country
-                  v-radio(
-                    :label="country.label"
-                    :value="country.value"
-                    :key="country.value"
-                    mandatory
-                  )
-                v-flex.xs2.offset-xs4.flags
-                  v-avatar(size="24px" large)
-                    img(:src="`img/lang/flags/${country.flag}`")
+        v-card-text
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('en')")
+                img(src="/img/lang/flags/en.png")
+
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('fr')")
+                img(src="/img/lang/flags/fr.png")
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('de')")
+                img(src="/img/lang/flags/de.png")
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('it')")
+                img(src="/img/lang/flags/it.png")
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('es')")
+                img(src="/img/lang/flags/es.png")
         v-divider
         v-card-actions
-          v-btn(color="orange darken-1" left flat @click.native="onCloseDialog") {{ $t('Button.close') }}
-          v-btn(color="orange darken-1" left flat @click.native="translateI18n").mx-auto {{ $t('Button.valid') }}
+          v-flex(xs6 offset-xs3 justify-center align-center)
+            v-btn(color="orange darken-1" flat @click.native="onCloseDialog") {{ $t('Button.close') }}
 </template>
 
 <script>
@@ -45,6 +53,7 @@ export default {
   name: 'AppLanguagesSelect',
 
   data: () => ({
+    dataReg: new RegExp(/^\/[a-zA-Z][^/]+/),
     dialog: false,
     top: true,
     right: false,
@@ -59,21 +68,34 @@ export default {
     ...mapGetters({
       currentLocale: 'currentLocale'
     }),
+    pathRoute () {
+      return this.$route.fullPath
+    },
+    replacedRoute () {
+      return this.$route.fullPath.replace(this.dataReg, `/${this.currentLocale}`)
+    },
     countries () {
       return this.$t('Button.countries')
     },
     storeLocale () {
-      return Cookie.get('locale')
+      return Cookie.get('i18n_redirected')
+    },
+    toReplace () {
+      let str = `'^/' + ${this.$i18n.locale} + (${this.$route.fullPath}.indexOf('/' + ${this.$i18n.locale} + '/') === 0 ? '/' : '')`
+      alert(str)
     }
   },
 
   watch: {
     userLocale (value, oldValue) {
-      console.log(value, oldValue)
       if (value !== this.currentLocale && value !== this.storeLocale) {
         this.$store.commit('setLocale', value)
         Cookie.set('locale', value, { expires: 7 })
       }
+    },
+    '$route' (to, from) {
+      // console.log(to, from)
+      this.dialog = false
     }
   },
   mounted () {
@@ -84,18 +106,18 @@ export default {
   methods: {
     onCloseDialog () {
       this.dialog = false
-      if (this.selectedLang !== this.currentLanguage.locale) this.selectedLang = this.currentLanguage.locale
+      if (this.selectedLang !== this.currentLanguage) this.selectedLang = this.currentLanguage
     },
 
-    translateI18n () {
+    translateI18n (lang) {
       this.dialog = false
-
-      // this.$store.commit('setLocale', this.userLocale)
-      // this.$router.replace({ params: { currentLanguage } })
-      this.$i18n.locale = this.userLocale
-      this.$emit('localeChanged', this.userLocale)
-      // Cookie.set('locale', this.currentLanguage, { expires: 7 })
-      // document.cookie = `currentLanguage=${lang};path=/;max-age=${60 * 60 * 24 * 7}` // expires in 7 days
+      this.$i18n.locale = lang
+      this.$emit('localeChanged', lang)
+      Cookie.set('locale', lang, { expires: 7 })
+      return true
+    },
+    redirectTo (locale) {
+      return this.$router.push(this.replacedRoute)
     }
   }
 }

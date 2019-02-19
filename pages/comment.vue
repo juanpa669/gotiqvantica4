@@ -1,4 +1,12 @@
+<template>
+  <div>
+    <h1>This is comment page.</h1>
+    <nuxt-link :to="localePath('index')">{{ $t('home') }}</nuxt-link>
+  </div>
+</template>
+
 <script>
-import Comment from '~/pages/_lang/comment'
-export default Comment
+export default {
+  middleware: 'authenticated'
+}
 </script>
