@@ -25,7 +25,8 @@
               v-for="(item, i) in items"
               :key="i"
               exact
-              :to="{ path: item.to,  params: { lang: currentLocale } }"
+              nuxt
+              :to="localePath({name: item.name},$i18n.locale)"
               ripple
               active-class="mc-active-class"
             )

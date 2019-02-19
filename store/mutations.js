@@ -5,9 +5,6 @@ const mutations = {
   setIsMobile (state, payload) {
     state.isMobile = payload
   },
-  setLocale (state, payload) {
-    state.locale = payload
-  },
   setDrawer (state, payload) {
     state.appDrawer = payload
   },

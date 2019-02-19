@@ -14,18 +14,31 @@ v-layout.row
         v-card-title.mx-5 {{ $t('Dialog.selectCountry') }}
         v-divider
         v-card-text
-          v-radio-group(v-model="userLocale" column)
-            template(v-for="country in countries ")
-              v-layout.justify-center
-                v-flex.xs2
-                  v-btn(flat small @click="translateI18n(country.value)") {{ country.label }}
-                v-flex.xs2.flags
-                  v-avatar(size="24px" large)
-                    img(:src="`${country.value}/img/lang/flags/${country.flag}`")
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('en')")
+                img(src="/img/lang/flags/en.png")
+
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('fr')")
+                img(src="/img/lang/flags/fr.png")
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('de')")
+                img(src="/img/lang/flags/de.png")
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('it')")
+                img(src="/img/lang/flags/it.png")
+          v-layout(wrap justify-center align-center)
+            v-flex(xs6 offset-xs2)
+              nuxt-link(:to="switchLocalePath('es')")
+                img(src="/img/lang/flags/es.png")
         v-divider
         v-card-actions
-          v-btn(color="orange darken-1" left flat @click.native="onCloseDialog") {{ $t('Button.close') }}
-          v-btn(color="orange darken-1" left flat @click.native="translateI18n").mx-auto {{ $t('Button.valid') }}
+          v-flex(xs6 offset-xs3 justify-center align-center)
+            v-btn(color="orange darken-1" flat @click.native="onCloseDialog") {{ $t('Button.close') }}
 </template>
 
 <script>
@@ -53,7 +66,7 @@ export default {
 
   computed: {
     ...mapGetters({
-      currentLocale: 'currentLocale'
+      currentLocale: 'modules/i18n/currentLocale'
     }),
     pathRoute () {
       return this.$route.fullPath
@@ -65,7 +78,7 @@ export default {
       return this.$t('Button.countries')
     },
     storeLocale () {
-      return Cookie.get('locale')
+      return Cookie.get('i18n_redirected')
     },
     toReplace () {
       let str = `'^/' + ${this.$i18n.locale} + (${this.$route.fullPath}.indexOf('/' + ${this.$i18n.locale} + '/') === 0 ? '/' : '')`
@@ -76,9 +89,13 @@ export default {
   watch: {
     userLocale (value, oldValue) {
       if (value !== this.currentLocale && value !== this.storeLocale) {
-        this.$store.commit('setLocale', value)
+        this.$store.commit('i18n/setLocale', value)
         Cookie.set('locale', value, { expires: 7 })
       }
+    },
+    '$route' (to, from) {
+      // console.log(to, from)
+      this.dialog = false
     }
   },
   mounted () {
@@ -97,9 +114,7 @@ export default {
       this.$i18n.locale = lang
       this.$emit('localeChanged', lang)
       Cookie.set('locale', lang, { expires: 7 })
-      this.redirectTo(lang)
-
-      // document.cookie = `currentLanguage=${lang};path=/;max-age=${60 * 60 * 24 * 7}` // expires in 7 days
+      return true
     },
     redirectTo (locale) {
       return this.$router.push(this.replacedRoute)

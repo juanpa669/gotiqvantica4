@@ -1,6 +1,5 @@
 const getters = {
-  drawer: (state) => state.appDrawer,
-  currentLocale: (state) => state.locale
+  drawer: (state) => state.appDrawer
 }
 
 export default getters

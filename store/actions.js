@@ -13,9 +13,6 @@ const actions = {
     }
     commit('setAuth', auth)
   },
-  setLocale ({ commit }, payload) {
-    commit('setLocale', payload)
-  },
   toggleDrawer ({ commit }) {
     commit('toggleDrawer')
   },

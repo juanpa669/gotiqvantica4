@@ -1,52 +1,59 @@
 {
 
   "Toolbar": {
-    "items": [{
+    "items": [
+      {
+        "icon": "home",
+        "title": "Accueil",
+        "to": "/index",
+        "name": "index"
+      },
+      {
         "icon": "bubble_chart",
         "title": "Gotiqvantica",
-        "to": "/fr",
-        "name": "home"
+        "to": "/gotiqvantica",
+        "name": "gotiqvantica"
       },
       {
         "icon": "face",
         "title": "Auteur",
-        "to": "/fr/author",
+        "to": "/author",
         "name": "author"
       },
       {
         "icon": "chrome_reader_mode",
         "title": "Extraits",
-        "to": "/fr/excerpt",
+        "to": "/excerpt",
         "name": "excerpt"
       },
       {
         "icon": "business",
         "title": "Editeur",
-        "to": "/fr/publisher",
+        "to": "/publisher",
         "name": "publisher"
       },
       {
         "icon": "comment",
         "title": "Forvm",
-        "to": "/fr/forum",
+        "to": "/forum",
         "name": "forum"
       },
       {
         "icon": "contact_mail",
         "title": "Contact",
-        "to": "/fr/contact",
+        "to": "/contact",
         "name": "contact"
       },
       {
         "icon": "error_outline",
         "title": "Erratum",
-        "to": "/fr/erratum",
+        "to": "/erratum",
         "name": "erratum"
       },
       {
         "icon": "library_books",
         "title": "Le retable d’Issenheim",
-        "to": "/fr/retable",
+        "to": "/retable",
         "name": "retable"
       }
     ]
@@ -102,8 +109,8 @@
   },
   "Home": {
     "mainTitle": "Tous promis au Paradis,<br />Nous sommes tous condamnés<br />à la Lumière. Ainsi soit-il",
-    "title": "Le secret des cathédrales - Gotiqvantica Le Livre",
-    "sentence1": "All promised in Paradise, we are all condemned to the Light. So be it!",
+    "title": "Bienvenue sur le site de Rina Sestito Arce",
+    "sentence": "All promised in Paradise, we are all condemned to the Light. So be it!",
     "cardTitle": "En Construction",
     "cardText": "La vidéo est en cours de réalisation et sera mise en ligne dès que possible",
     "closeBtn": "Close",
@@ -192,7 +199,12 @@
     "contentError": "Erreur sur le champ Commentaire"
   },
   "Retable": {
-    "text": "<p class=\"extraits-first\">Sur le chemin de pèlerinage, le retable d’Issenheim est souvent présenté comme un exemple de maîtrise artistique au service de l'enseignement religieux de l'Église chrétienne. Cependant, selon l'auteure ce retable présente« des détails» à double lecture suggérant aussi une dimension ésotérique.L'approche proposée est absolument innovante, parfois déroutante, mais toujours cohérente.Avec des mots simples, l'auteure questionne, propose et fnalement révèle que ce retable est aussi une ordonnance alchimique au point de le considérer davantage comme une œuvre spirituelle que religieuse. L'enseignement peint sur ce retable montrerait une autre image de Jésus et de sa mission christique, Marie - Madeleine serait présentée comme l'apôtre des apôtres;Marie comme une Initiée de pureté exceptionnelle plus que vierge. Le regard de l'alchimiste permet de découvrir l'enseignement du retable émouvant de tolérance et d'actualité, en accord avec la réalité subatomique et avec les témoignages de ceux qui ont vécu« l'Au - delà» à leur mort clinique. Cet ouvrage est une rencontre entre l'Art et le Spirituel, entre le Spirituel et le Quantique: le retable est ici considéré comme un tremplin de Transmutation. </p> <p class = \"extraits-first text-xs-center\" > Extraits du livre </p> p .24: <p> En d’autres termes,  le retable que d'aucuns considèrent comme une œuvre religieusement dogmatique semble faire ici l'écho à l’Église d'Orient en considérant Marie - Madeleine comme l’apôtre préféré de Jésus.Selon les Écritures, c'est d'abord à elle que Jésus ressuscité s'est spontanément présenté et sur le retable c'est à ses pieds qu'est placé le vase thérapeutique.En d'autres termes, le vase du retable efface la diffamation dont la femme fait l'objet: Marie - Madeleine est une Initiée d'exception, ce qui fait de Jésus un prophète particulièrement éveillé qui place la femme au premier plan alors qu'en ces temps la femme était considérée mineure à vie. </p>p .33:<p> Compte tenu de ces considérations, Christ placé au centre des polarités positive / négative, représente forcément la partie neutre de la matière: entre le Mercure - St - Sébastien et le Soufre - St - Antoine, le Christ est… le sel de l'alchimiste! Or le sel de la matière est le neutron de l'atome qui a comme fonction de« coller» les composantes subatomiques: le sel, scelle… Christ identifié par la partie neutre de l'atome sous - entend que le message christique a pour but d'instaurer la paix parmi les hommes, de les relier les uns aux autres malgré les individualités de chacun. Le sel est éternel, il est la partie de la matière que l'on ne peut pas éliminer.Le sel permet aussi la conservation des aliments: le sel représente notre infinitude qui est en lien avec le message christique puisque par la Passion est annoncé à l'Humanité que la mort n'est que le passage vers l'Après - Vie. Le sel est la partie neutre de la matière comme le neutron exempt de charge électrique, ce qui est en lien avec le Christ qui ne juge pas, mais accueille toute personne quoi qu'elle ait pu faire. </p>p .43: <p> Grünewald présente un concert éthéré puisqu'il s'agit d'esprits musiciens, dans un contraste équilibré de forces obscures et lumineuses au sein d'une même composition harmonique… puisque musicale!Les religions enseignent une vision dichotomique de la vie en défendant l'idée qu'il y ait d'un côté le Bien et de l'autre le Mal; d'un côté les croyants et de l'autre les infidèles.Au contraire, le retable nous invite à reconnaître le Mal et à vivre avec lui, car le Mal n'est pas mauvais, mais indispensable pour faire fonctionner l'Univers!Connaître le Mal permet d'apprendre le discernement: les anges au - dessus de Jésus indiquent qu'Il a finalement choisi de servir le Bien.Contrairement à toute religion qui défend sa vérité en dépit des autres religions, la spiritualité nous invite à trouver les points communs entre tous les individus– croyants ou non– car le but est d'être à l'UNison, soit conscient de son UNique tout en étant relié à l'UNivers! </p>"
+    "text": "<p class=\"extraits-first\">Sur le chemin de pèlerinage, le retable d’Issenheim est souvent présenté comme un exemple de maîtrise artistique au service de l'enseignement religieux de l'Église chrétienne. Cependant, selon l'auteure ce retable présente« des détails» à double lecture suggérant aussi une dimension ésotérique.L'approche proposée est absolument innovante, parfois déroutante, mais toujours cohérente.Avec des mots simples, l'auteure questionne, propose et fnalement révèle que ce retable est aussi une ordonnance alchimique au point de le considérer davantage comme une œuvre spirituelle que religieuse. L'enseignement peint sur ce retable montrerait une autre image de Jésus et de sa mission christique, Marie - Madeleine serait présentée comme l'apôtre des apôtres;Marie comme une Initiée de pureté exceptionnelle plus que vierge. Le regard de l'alchimiste permet de découvrir l'enseignement du retable émouvant de tolérance et d'actualité, en accord avec la réalité subatomique et avec les témoignages de ceux qui ont vécu« l'Au - delà» à leur mort clinique. Cet ouvrage est une rencontre entre l'Art et le Spirituel, entre le Spirituel et le Quantique: le retable est ici considéré comme un tremplin de Transmutation.</p><p class=\"extraits-first text-xs-center\">Extraits du livre</p>p .24:<p>En d’autres termes,  le retable que d'aucuns considèrent comme une œuvre religieusement dogmatique semble faire ici l'écho à l’Église d'Orient en considérant Marie - Madeleine comme l’apôtre préféré de Jésus.Selon les Écritures, c'est d'abord à elle que Jésus ressuscité s'est spontanément présenté et sur le retable c'est à ses pieds qu'est placé le vase thérapeutique.En d'autres termes, le vase du retable efface la diffamation dont la femme fait l'objet: Marie - Madeleine est une Initiée d'exception, ce qui fait de Jésus un prophète particulièrement éveillé qui place la femme au premier plan alors qu'en ces temps la femme était considérée mineure à vie.</p>p .33:<p>Compte tenu de ces considérations, Christ placé au centre des polarités positive / négative, représente forcément la partie neutre de la matière: entre le Mercure - St - Sébastien et le Soufre - St - Antoine, le Christ est… le sel de l'alchimiste! Or le sel de la matière est le neutron de l'atome qui a comme fonction de« coller» les composantes subatomiques: le sel, scelle… Christ identifié par la partie neutre de l'atome sous - entend que le message christique a pour but d'instaurer la paix parmi les hommes, de les relier les uns aux autres malgré les individualités de chacun. Le sel est éternel, il est la partie de la matière que l'on ne peut pas éliminer.Le sel permet aussi la conservation des aliments: le sel représente notre infinitude qui est en lien avec le message christique puisque par la Passion est annoncé à l'Humanité que la mort n'est que le passage vers l'Après - Vie. Le sel est la partie neutre de la matière comme le neutron exempt de charge électrique, ce qui est en lien avec le Christ qui ne juge pas, mais accueille toute personne quoi qu'elle ait pu faire.</p>p .43:<p>Grünewald présente un concert éthéré puisqu'il s'agit d'esprits musiciens, dans un contraste équilibré de forces obscures et lumineuses au sein d'une même composition harmonique… puisque musicale!Les religions enseignent une vision dichotomique de la vie en défendant l'idée qu'il y ait d'un côté le Bien et de l'autre le Mal; d'un côté les croyants et de l'autre les infidèles.Au contraire, le retable nous invite à reconnaître le Mal et à vivre avec lui, car le Mal n'est pas mauvais, mais indispensable pour faire fonctionner l'Univers!Connaître le Mal permet d'apprendre le discernement: les anges au - dessus de Jésus indiquent qu'Il a finalement choisi de servir le Bien.Contrairement à toute religion qui défend sa vérité en dépit des autres religions, la spiritualité nous invite à trouver les points communs entre tous les individus– croyants ou non– car le but est d'être à l'UNison, soit conscient de son UNique tout en étant relié à l'UNivers!</p>",
+    "meta": {
+      "title": "GOTIQCANTICA Gothic Cathedrals by Rina Sestito Arce",
+      "description": "Gotiqvantica, the book that offers you an esoteric interpretation of gothic cathedrals that unites physical quantity, alchemy and the search for the Grail.",
+      "keywords": "gothic cathedrals, cathedral, gothic, esoteric, alchemy, quantum, quantum physics, grail, templar"
+    }
   },
   "Summary": {
     "text": "<p class=\"extraits extraits-first\">Dans cet ouvrage sont citées différentes <a href=\"https://fr.wikipedia.org/wiki/Cath%C3%A9drale\" target=\"_blank\" style=\"color:orange\">cath&eacute;drales</a> gothiques européennes pour illustrer ce langage ésotérique fait de symboles, de géométrie, de statuaire, de proportions ou d’orientation. Et il se trouve que ce langage provient de savoirs de civilisations anciennes, en particulier celtique, égyptien, hébraïque, grec, soufi ou hindou. Du coup, la dimension spirituelle de la <a href=\"https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Cath%C3%A9drale_gothique\" target=\"_blank\" style=\"color:orange\">cathédrale gothique</a> présente des analogies avec des sites mondialement connus comme la pyramide de Gizeh ou Stonehenge.</p><p class = \"extraits extraits-first\">L’auteur prend littéralement le lecteur par la main, elle le fait cheminer pas à pas dans l’espace délimité par les murs de la cathédrale et s’arrête sur diverses parties de l’édifice pour en expliquer le sens, ou les sens, cachés ou non. Ainsi, le lecteur découvre que la cathédrale est une invitation à cheminer analogue à celle que vivent les pèlerins allant à <a href=\"https: //fr.wikipedia.org/wiki/P%C3%A8lerinage_de_Saint-Jacques-de-Compostelle\" target=\"_blank\" style=\"color:orange\">Compostelle</a>, analogue aussi à celle racontée dans la légende du Roi Arthur en quête du <a href=\"https://fr.wikipedia.org/wiki/Graal\" target=\"_blank\" style=\"color:orange\">Graal</a>. La cathédrale gothique est la Voie de sagesse avec l’ Amour comme destination finale.Elle est le chemin d’ Eveil qui ne peut être parcouru d’ un coup, mais qui exige d’ être accompli par étapes. Chaque étape nous spolie de nos errances, chaque étape nous purifie toujours plus et nous prépare à passer dans le monde de l’ Au - delà, un monde exempt de matière et où règne l’ Amour Inconditionnel. </p><p class = \"extraits extraits-first\">L'enseignement spirituel présent dans la cathédrale gothique coïncide avec les récentes recherches médicales sur le cerveau, la différence entre le cerveau et la conscience et le fonctionnement du cœur ; le tout étant corroboré par les témoignages d'Expériences de Morts Imminentes. En fin de compte l’ essence de l’ enseignement proposé par la cathédrale gothique réside dans son espace, dans son vide.Un vide qui est comme une caisse de résonnance construit de manière analogue à notre Univers dans lequel nous évoluons et qui produit un Son Permanent. Nous vivons une ère nouvelle où Spiritualité et Science semblent avoir la même vision de l’ Univers, de la Vie, de la Mort et de l 'Après-Vie.</pclass> <p class = \"extraits extraits-first\">L’Univers est un Son et la musique est l’une des expressions maîtresses du langage ésotérique. Composé de 7 clefs, les notes musicales doivent donc ouvrir 7 portes. Et ce livre a la prétention d’en offrir les serrures.</p>"
