@@ -43,9 +43,9 @@ module.exports = {
     // font awesome icons
     '~/plugins/fa.js'
   ],
-  // generate: {
-  // routes: ['/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/retable', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/retable', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/retable', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/retable']
-  // },
+  generate: {
+    routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/retable', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/retable', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/retable', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/retable', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/retable']
+  },
   modules: [
     'nuxt-fontawesome',
     'nuxt-material-design-icons',
@@ -117,15 +117,15 @@ module.exports = {
       // This does not work with regexp: "/foo/:slug-:id(\\d+)". If you want to use
       // regexp in the path, then set this option to false, and make sure you process
       // path encoding yourself.
-      encodePaths: true,
-      seo: false,
+      encodePaths: false,
+      seo: false
 
       // Called right before app's locale changes
-      beforeLanguageSwitch: () => console.log('beforeLanguageSwitch..................'),
+      // beforeLanguageSwitch: () => console.log('beforeLanguageSwitch..................'),
 
       // Called after app's locale has changed
-      onLanguageSwitched: () => console.log('onLanguageSwitched......................'),
-      vuex: {
+      // onLanguageSwitched: () => console.log('onLanguageSwitched......................'),
+    /*  vuex: {
         // Module namespace
         moduleName: 'i18n',
         // Mutations config
@@ -137,7 +137,7 @@ module.exports = {
         },
         // PreserveState from server
         preserveState: false
-      }
+      } */
     }]
   ],
   css: ['~/assets/style/app.styl'],

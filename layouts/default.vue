@@ -52,7 +52,7 @@
         return this.getCookie()
       }
     },
-    created () {
+    beforeCreate () {
       if (this.$route.path === '/') {
         this.$router.push('en')
       }
@@ -76,7 +76,7 @@
       },
       checkUserLocale () {
         if ((this.storedLocale !== undefined) && (this.storedLocale !== this.$store.state.i18n.locale)) {
-          this.$store.commit('i18n/setLocale', this.storedLocale)
+          this.$store.commit('setLocale', this.storedLocale)
         }
       },
       isStoreEqualToLocal () {
@@ -86,11 +86,11 @@
       updateLocale (value) {
         if (typeof value === 'string') {
           if (value !== this.storedLocale && value !== undefined) {
-            this.$store.commit('i18n/setLocale', value)
+            this.$store.commit('setLocale', value)
             this.$i18n.locale = value
             this.setCookie(value)
           } else {
-            this.$store.commit('i18n/setLocale', 'fr')
+            this.$store.commit('setLocale', 'fr')
             // this.$i18n.locale = 'en'
           }
           return true

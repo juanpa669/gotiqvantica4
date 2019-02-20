@@ -66,7 +66,7 @@ export default {
 
   computed: {
     ...mapGetters({
-      currentLocale: 'modules/i18n/currentLocale'
+      currentLocale: 'currentLocale'
     }),
     pathRoute () {
       return this.$route.fullPath
@@ -89,7 +89,7 @@ export default {
   watch: {
     userLocale (value, oldValue) {
       if (value !== this.currentLocale && value !== this.storeLocale) {
-        this.$store.commit('i18n/setLocale', value)
+        this.$store.commit('setLocale', value)
         Cookie.set('locale', value, { expires: 7 })
       }
     },

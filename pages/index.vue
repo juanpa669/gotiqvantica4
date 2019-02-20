@@ -94,7 +94,7 @@ export default {
     })
   },
   mounted () {
-    // return this.$store.commit('i18n/setLocale', 'en')
+    // return this.$store.commit('setLocale', 'en')
   }
 }
 </script>
