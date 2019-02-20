@@ -100,7 +100,7 @@ export default {
     },
 
     onPurchase (product) {
-      console.log(product, 'product')
+      // console.log(product, 'product')
       if (typeof product === 'boolean') {
         this.toggle = product
       } else {

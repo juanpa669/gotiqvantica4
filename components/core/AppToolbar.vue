@@ -54,7 +54,7 @@
         this.$router.push(e.to)
       },
       onPurchase () {
-        console.log('emit onPurchase', 'AppToolbar')
+        // console.log('emit onPurchase', 'AppToolbar')
         let product = this.$route.name
         this.$emit('onPurchase', product)
         return true

@@ -52,12 +52,17 @@
         return this.getCookie()
       }
     },
+    beforeCreate () {
+      if (this.$route.path === '/') {
+        this.$router.push('en')
+      }
+    },
     mounted () {
       if (this.getCookie() === undefined) {
         this.setCookie('en')
       }
       if (this.isStoreEqualToLocal() === false) {
-        console.log('need to set stored locale : ' + this.getCookie())
+        // console.log('need to set stored locale : ' + this.getCookie())
         return this.updateLocale(this.storedLocale)
       }
       this.$_bus.$on('localeChanged', this.updateLocale)
@@ -70,40 +75,36 @@
       onInput (e) {
       },
       checkUserLocale () {
-        if ((this.storedLocale !== undefined) && (this.storedLocale !== this.$store.state.locale)) {
+        if ((this.storedLocale !== undefined) && (this.storedLocale !== this.$store.state.i18n.locale)) {
           this.$store.commit('setLocale', this.storedLocale)
         }
       },
       isStoreEqualToLocal () {
-        const value = this.storedLocale === this.$store.state.locale
+        const value = this.storedLocale === this.$store.state.i18n.locale
         return value
       },
       updateLocale (value) {
-        if (value) {
-          console.warn('Update locale ....value :' + value, 'storedLocale : ' + this.storedLocale)
+        if (typeof value === 'string') {
           if (value !== this.storedLocale && value !== undefined) {
-            console.log(value)
             this.$store.commit('setLocale', value)
             this.$i18n.locale = value
             this.setCookie(value)
           } else {
-            this.$store.commit('setLocale', this.storedLocale)
-            this.$i18n.locale = this.storedLocale
+            this.$store.commit('setLocale', 'fr')
+            // this.$i18n.locale = 'en'
           }
-          // this.$store.commit('setLocale', this.storedLocale)
-          // this.$i18n.locale = this.storedLocale
           return true
         }
       },
       getCookie () {
-        return Cookie.get('locale')
+        return Cookie.get('i18n_redirected')
       },
       setCookie (value) {
         return Cookie.set('locale', value)
       },
       onPurchase (value) {
-        console.log('onPurchase Default.vue : ' + value)
-        console.log('onPurchase dialog : ' + this.dialog)
+        // console.log('onPurchase Default.vue : ' + value)
+        // console.log('onPurchase dialog : ' + this.dialog)
         if (typeof value === 'boolean') console.log('boolean : ' + value)
         if (value) {
           if (value === 'retable') {

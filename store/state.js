@@ -4,7 +4,6 @@ const state = () => ({
   appMinivariant: false,
   isMobile: false,
   locales: ['en', 'fr', 'de', 'it', 'es'],
-  locale: 'en',
   auth: null
 })
 

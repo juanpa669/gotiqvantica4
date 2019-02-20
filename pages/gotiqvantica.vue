@@ -58,7 +58,10 @@ import SocialSharing from 'vue-social-sharing'
 // import { mapGetters } from 'vuex'
 
 export default {
-  name: 'HomePage',
+  name: 'GotiqvanticaPage',
+  nuxtI18n: {
+    locales: ['en', 'fr', 'es', 'it', 'es']
+  },
   components: {
     SocialSharing
   },

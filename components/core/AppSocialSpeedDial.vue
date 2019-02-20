@@ -28,7 +28,7 @@
     url="https://rina-sestito-arce.com/"
     :title="$t('bookTitle')"
     :description="$t('bookDescription')"
-    :quote="$t('Home.sentence1')"
+    :quote="$t('Home.sentence')"
     :hashtags="$t('hashTags')"
     twitter-user="RinarceS"
     inline-template
