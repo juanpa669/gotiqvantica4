@@ -26,7 +26,7 @@
                   ripple
                   round
                   color="white"
-                  @click.prevent.stop="purchase"
+                  @click.native="purchase"
                   target="_blank"
                 ) {{ $t('Button.buy') }}
       v-spacer

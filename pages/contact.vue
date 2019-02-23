@@ -129,7 +129,7 @@ export default {
   },
   computed: {
     ...mapGetters('app', { locale: 'locale' }),
-    humanAnswer: _ => process.env.VUE_APP_HUMAN_ANSWER
+    humanAnswer: _ => '12'
   },
 
   mounted () {
@@ -189,7 +189,7 @@ export default {
         <tr style="font-size: 14px; margin: 0; padding: 0;">
         <td style="font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top">&nbsp;</td></tr>
         <tr style="font-size: 14px; margin: 0; padding: 0;">
-        <td style="font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"><small><i><a href="https://rina-sestito-arce.com">Gotiqvantica</a></i></small></td></tr>
+        <td style="font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"><small><i><a href="https://cathedrale-gothique.com">Gotiqvantica</a></i></small></td></tr>
         <tr style="font-size: 14px; margin: 0; padding: 0;">
         <td style="font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;" valign="top"><small><i>e-mail envoyé depuis le formulaire de contact rina-sestito-arce-com</i></small></td>
         </tr></tbody></table></td></tr></tbody></table></div></td>
@@ -205,7 +205,7 @@ export default {
       params.append('text', text)
       params.append('html', html)
       params.append('to', this.contact.email)
-      axios.post('/php/email.php', params, header)
+      axios.post('https://cathedrale-gothique.com/php/email.php', params, header)
         .then(response => {
           if (response.status === 200) {
             this.addSnotify({

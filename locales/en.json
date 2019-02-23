@@ -1,8 +1,4 @@
 {
-  "Footer": {
-    "design": "Design Francesco LOIARRO",
-    "website": "Website J-Yves HENQUEZ"
-  },
   "Toolbar": {
     "items": [
       {
@@ -222,5 +218,9 @@
       "description": "Gotiqvantica, the book that offers you an esoteric interpretation of gothic cathedrals that unites physical quantity, alchemy and the search for the Grail.",
       "keywords": "gothic cathedrals, cathedral, gothic, esoteric, alchemy, quantum, quantum physics, grail, templar"
     }
+  },
+  "Footer": {
+    "design": "Design Francesco LOIARRO",
+    "website": "Website J-Yves HENQUEZ"
   }
 }

@@ -77,7 +77,7 @@ export default {
   },
   computed: {
     // ...mapGetters(['isMobile']),
-    lang () { return this.$store.state.locale },
+    lang () { return this.$store.state.i18n.locale },
     showErratum () { return this.erratumLang.indexOf(this.lang) > -1 },
     message () { return this.erratumText },
     chakraImg () {

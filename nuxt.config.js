@@ -6,7 +6,19 @@ const fr = require('./locales/fr.json')
 const de = require('./locales/de.json')
 const es = require('./locales/es.json')
 const it = require('./locales/it.json')
-
+const routes = ['/accueil', '/cathedrales-gothiques', '/auteur', '/extraits', '/forum', '/contact', '/editeur', '/le-retable-d-issenheim', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/le-retable-d-issenheim', '/fr', '/fr/cathedrales-gothiques', '/fr/auteur', '/fr/extraits', '/fr/forum', '/fr/contact', '/fr/editeur', '/fr/le-retable-d-issenheim', '/de', '/de/cathedrales-gothiques', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/le-retable-d-issenheim', '/it', '/it/cathedrales-gothiques', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/le-retable-d-issenheim', '/es', '/es/cathedrales-gothiques', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/le-retable-d-issenheim']
+const siteMapRoutes = function () {
+  return routes.map((currRoute) => {
+    return (
+      {
+        url: currRoute,
+        changefreq: 'daily',
+        priority: 1,
+        lastmodISO: '2019-02-23T23:43:00.000Z'
+      }
+    )
+  })
+}
 module.exports = {
   /*
   ** Headers of the page
@@ -33,22 +45,29 @@ module.exports = {
     '~/plugins/vuetify.js',
     // EventBus
     '~/plugins/bus.js',
-    // Internalization
-    // '~/plugins/i18n.js',
     // Core components
     '~/plugins/core-components.js',
-    // '~/plugins/social.js',
+    // Social component
+    '~/plugins/social.js',
     // Vue Snotify notifications
-    '~/plugins/snotify.js',
+    '~/plugins/snotify.js'
     // font awesome icons
-    '~/plugins/fa.js'
+    // '~/plugins/fa.js'
   ],
   // generate: {
-  // routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/retable', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/retable', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/retable', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/retable', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/retable', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/retable']
+  // routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/le-retable-d-issenheim', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/le-retable-d-issenheim', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/le-retable-d-issenheim', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/le-retable-d-issenheim', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/le-retable-d-issenheim', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/le-retable-d-issenheim']
   // },
   modules: [
     'nuxt-fontawesome',
-    'nuxt-material-design-icons',
+    ['@nuxtjs/dotenv', {
+      VUE_APP_HUMAN_ANSWER: ['12']
+    }],
+    ['@nuxtjs/sitemap', {
+      path: '/sitemap.xml',
+      hostname: 'https://cathedrale-gothique.com',
+      generate: true,
+      routes: siteMapRoutes
+    }],
     ['nuxt-validate', {
       lang: 'en'
       // regular vee-validate options
@@ -85,7 +104,7 @@ module.exports = {
         },
         gotiqvantica: {
           en: '/gotiqvantica',
-          fr: '/gotiqvantica',
+          fr: '/cathedrales-gothiques',
           es: '/gotiqvantica',
           de: '/gotiqvantica',
           it: '/gotiqvantica'
@@ -117,16 +136,17 @@ module.exports = {
           es: '/contactar',
           de: '/kontakt',
           it: '/contatto'
+        },
+        retable: {
+          en: '/le-retable-d-issenheim',
+          fr: '/le-retable-d-issenheim',
+          es: '/le-retable-d-issenheim',
+          de: '/le-retable-d-issenheim',
+          it: '/le-retable-d-issenheim'
         }
       },
       encodePaths: false,
       seo: true
-
-      // Called right before app's locale changes
-      // beforeLanguageSwitch: () => console.log('beforeLanguageSwitch..................'),
-
-      // Called after app's locale has changed
-      // onLanguageSwitched: () => console.log('onLanguageSwitched......................'),
     /*  vuex: {
         // Module namespace
         moduleName: 'i18n',

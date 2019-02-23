@@ -65,6 +65,6 @@
 
 <style lang="css" scoped>
   .specialLinks {
-    color: #00fdff!important;
+    color: #00bfff!important;
   }
 </style>

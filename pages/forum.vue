@@ -51,7 +51,7 @@
 
                     v-card-actions
                       social-sharing(
-                        url="https://rina-sestito-arce.com/"
+                        url="https://cathedrale-gothique.com/"
                         :title="$t('Forum.title')"
                         :description="comment.message"
                         :quote="comment.message"
@@ -59,7 +59,7 @@
                         twitter-user="RinarceS"
                         inline-template
                         network-tag="p"
-                        media="https://rina-sestito-arce.com/img/main/GOTIQVANTICA.jpg"
+                        media="https://cathedrale-gothique.com/img/main/GOTIQVANTICA.jpg"
                       )
                         network(network="facebook")
                           v-btn(

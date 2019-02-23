@@ -36,7 +36,8 @@
 
         v-flex.xs2
           v-btn(
-            left id="amazonBtn"
+            left
+            id="fnacBtn"
             icon
             :href="product.fnacUrl" target="_blank"
           )
@@ -63,50 +64,42 @@ export default {
     product: {
       type: Object,
       required: true,
-      default: {
-        amazonUrl: {
-          type: String,
-          required: true,
-          default: 'https://www.amazon.fr/Gotiqvantica-Rina-Sestito-Arce/dp/2407004094/ref=sr_1_1?ie=UTF8&qid=1512692037&sr=8-1&keywords=gotiqvantica'
-        },
-        fnacUrl: {
-          type: String,
-          required: false,
-          default: 'https://livre.fnac.com/a11193768/Rina-Sestito-Arce-Gotiqvantica/'
-        },
-        name: {
-          type: String,
-          required: false,
-          default: 'gotiqvantica'
-        }
+      amazonUrl: {
+        type: String,
+        required: false
+      },
+      fnacUrl: {
+        type: String,
+        required: false
+      },
+      name: {
+        type: String,
+        required: true,
+        default: 'gotiqvantica'
       }
     }
   },
-
   data () {
     return {
       toggle: false,
-      currentProduct: 'gotiqvantica'
+      currentProduct: this.product.name
     }
-  },
-  mounted () {
-    // this.$_bus.$on('onPurchase', this.onPurchase)
   },
 
   methods: {
     gotoHonore () {
       this.closeDialog()
-      window.open(`http://www.editions-saint-honore.com/produit/${this.currentProduct}/`, '_blank')
+      window.open(`http://www.editions-saint-honore.com/produit/${this.product.name}/`, '_blank')
     },
 
     onPurchase (product) {
-      // console.log(product, 'product')
+      console.log(product, 'product')
       if (typeof product === 'boolean') {
         this.toggle = product
       } else {
         this.currentProduct = product
         this.toggle = true
-        this.$_bus.$emit('onPurchase', 'gotivantica')
+        this.$_bus.$emit('onPurchase')
       }
     },
 
@@ -114,6 +107,9 @@ export default {
       // this.toggle = !this.toggle
       this.$emit('onCloseDialog')
     }
+  },
+  beforeDestroy () {
+    return this.$_bus.$off('onPurchase')
   }
 
 }
