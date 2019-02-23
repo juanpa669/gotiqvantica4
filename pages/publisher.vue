@@ -26,7 +26,7 @@
 export default {
   name: 'Editor',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
   data: () => ({
     show: false
@@ -36,7 +36,7 @@ export default {
       title: this.$t('Editor.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Editor.meta.description') },
-        { name: 'keywords', content: this.$t('Editor.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Editor.meta.keywords') }
       ]
     }
   },

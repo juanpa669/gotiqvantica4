@@ -43,9 +43,9 @@ module.exports = {
     // font awesome icons
     '~/plugins/fa.js'
   ],
-  generate: {
-    routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/retable', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/retable', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/retable', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/retable', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/retable']
-  },
+  // generate: {
+  // routes: ['/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/retable', '/fr/acceuil', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/retable', '/de/home', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/retable', '/it/casa', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/retable', '/es/casa', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/retable']
+  // },
   modules: [
     'nuxt-fontawesome',
     'nuxt-material-design-icons',
@@ -63,6 +63,7 @@ module.exports = {
         { code: 'de', iso: 'de-DE', file: de }
       ],
       defaultLocale: 'fr',
+      rootRedirect: '/fr/accueil',
       vueI18n: {
         fallbackLocale: 'en',
         messages: {
@@ -76,19 +77,26 @@ module.exports = {
       strategy: 'prefix',
       lazy: false,
       pages: {
+        index: {
+          en: '/home', // -> accessible at /about-us (no prefix since it's the default locale)
+          fr: '/accueil', // -> accessible at /fr/a-propos
+          es: '/casa', // -> accessible at /es/sobre
+          de: '/home', // -> accessible at /es/sobre
+          it: '/casa' // -> accessible at /es/sobre
+        },
+        gotiqvantica: {
+          en: '/gotiqvantica', // -> accessible at /about-us (no prefix since it's the default locale)
+          fr: '/gotiqvantica', // -> accessible at /fr/a-propos
+          es: '/gotiqvantica', // -> accessible at /es/sobre
+          de: '/gotiqvantica', // -> accessible at /es/sobre
+          it: '/gotiqvantica' // -> accessible at /es/sobre
+        },
         author: {
           en: '/author', // -> accessible at /about-us (no prefix since it's the default locale)
           fr: '/auteur', // -> accessible at /fr/a-propos
           es: '/autor', // -> accessible at /es/sobre
           de: '/autor', // -> accessible at /es/sobre
           it: '/autore' // -> accessible at /es/sobre
-        },
-        home: {
-          en: '/home', // -> accessible at /about-us (no prefix since it's the default locale)
-          fr: '/accueil', // -> accessible at /fr/a-propos
-          es: '/casa', // -> accessible at /es/sobre
-          de: '/home', // -> accessible at /es/sobre
-          it: '/casa' // -> accessible at /es/sobre
         },
         excerpt: {
           en: '/excerpt', // -> accessible at /about-us (no prefix since it's the default locale)

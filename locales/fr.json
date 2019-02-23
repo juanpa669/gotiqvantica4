@@ -9,7 +9,7 @@
         "name": "index"
       },
       {
-        "icon": "bubble_chart",
+        "icon": "library_books",
         "title": "Gotiqvantica",
         "to": "/gotiqvantica",
         "name": "gotiqvantica"

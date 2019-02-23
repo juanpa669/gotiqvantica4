@@ -59,7 +59,7 @@
 export default {
   name: 'erratum',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
   data: () => ({
     erratumText: '',
@@ -71,7 +71,7 @@ export default {
       title: this.$t('Erratum.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Erratum.meta.description') },
-        { name: 'keywords', content: this.$t('Erratum.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Erratum.meta.keywords') }
       ]
     }
   },
