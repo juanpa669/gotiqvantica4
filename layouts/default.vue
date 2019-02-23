@@ -1,10 +1,10 @@
 <template>
   <v-app dark>
-    <AppDrawer @input="onInput" />
+    <AppDrawer />
     <AppToolbar @onPurchase="onPurchase" @toggleDrawer="toggleIt" @onLocaleChange="updateLocale"/>
     <v-content>
       <v-container>
-        <AppPurchaseDialog :dialog="dialog" :product="gotiqvantica" @onCloseDialog="onCloseDialog"></AppPurchaseDialog>
+        <AppPurchaseDialog :dialog="dialog" :product="product" @onCloseDialog="onCloseDialog"></AppPurchaseDialog>
         <nuxt />
       </v-container>
     </v-content>
@@ -20,9 +20,7 @@
     data () {
       return {
         toggle: 0,
-        defaultProduct: {
-          ...this.gotiqvantica
-        },
+        product: {},
         gotiqvantica: {
           name: 'gotiqvantica',
           amazonUrl: 'https://www.amazon.fr/Gotiqvantica-Rina-Sestito-Arce/dp/2407004094/ref=sr_1_1?ie=UTF8&qid=1512692037&sr=8-1&keywords=gotiqvantica',
@@ -37,14 +35,7 @@
         drawer: true,
         fixed: false,
         dialog: false,
-        items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-        ],
-        miniVariant: false,
-        right: true,
-        rightDrawer: false,
-        title: 'Vuetify.js'
+        miniVariant: false
       }
     },
     computed: {
@@ -52,27 +43,17 @@
         return this.getCookie()
       }
     },
-    beforeCreate () {
-      if (this.$route.path === '/') {
-        this.$router.push('en')
-      }
-    },
     mounted () {
-      if (this.getCookie() === undefined) {
-        this.setCookie('en')
-      }
-      if (this.isStoreEqualToLocal() === false) {
-        // console.log('need to set stored locale : ' + this.getCookie())
-        return this.updateLocale(this.storedLocale)
-      }
+      this.$_bus.$on('onPurchase', this.onPurchase)
       this.$_bus.$on('localeChanged', this.updateLocale)
-      this.$on('onPurchase', this.onPurchase)
+    },
+    beforeDestroy () {
+      this.$_bus.$off('onPurchase')
+      this.$_bus.$off('localeChanged')
     },
     methods: {
       toggleIt () {
         return this.$store.commit('toggleDrawer')
-      },
-      onInput (e) {
       },
       checkUserLocale () {
         if ((this.storedLocale !== undefined) && (this.storedLocale !== this.$store.state.i18n.locale)) {
@@ -103,19 +84,19 @@
         return Cookie.set('locale', value)
       },
       onPurchase (value) {
-        // console.log('onPurchase Default.vue : ' + value)
-        // console.log('onPurchase dialog : ' + this.dialog)
-        if (typeof value === 'boolean') console.log('boolean : ' + value)
-        if (value) {
-          if (value === 'retable') {
-            this.dialog = true
-            this.defaultProduct = this.retable
+        if (this.$route.path === `/${this.$i18n.locale}/retable` || this.$route.path === '/retable') {
+          if (typeof value === 'string') {
+            this.product = this.retable
           } else {
-            this.dialog = true
-            this.defaultProduct = this.gotiqvantica
+            this.product = value
           }
-          this.dialog = true
+        } else {
+          if (typeof value === 'string') {
+            this.product = this.gotiqvantica
+          }
+          this.product = this.gotiqvantica
         }
+        this.dialog = true
       },
       onCloseDialog () {
         this.dialog = false

@@ -26,7 +26,7 @@
                   ripple
                   round
                   color="white"
-                  @click.prevent.stop="purchase"
+                  @click.native="purchase"
                   target="_blank"
                 ) {{ $t('Button.buy') }}
       v-spacer
@@ -62,6 +62,7 @@ export default {
   },
   methods: {
     purchase () {
+      console.log('event emitted!', JSON.stringify(this.product))
       this.$_bus.$emit('onPurchase', this.product)
     }
   }
