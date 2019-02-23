@@ -1,9 +1,5 @@
 {
 
-  "Footer": {
-    "design": "Design Francesco LOIARRO",
-    "website": "Webseite J-Yves HENQUEZ"
-  },
   "Toolbar": {
     "items": [
       {
@@ -20,7 +16,7 @@
       },
       {
         "icon": "face",
-        "title": "Autor",
+        "title": "über den Autor",
         "to": "/author",
         "name": "author"
       },
@@ -56,7 +52,7 @@
       },
       {
         "icon": "library_books",
-        "title": "Le retable d’Issenheim",
+        "title": "Der Issenheim Altar",
         "to": "/retable",
         "name": "retable"
       }

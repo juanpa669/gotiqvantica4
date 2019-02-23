@@ -44,7 +44,7 @@ module.exports = {
     '~/plugins/fa.js'
   ],
   // generate: {
-  // routes: ['/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/retable', '/fr/acceuil', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/retable', '/de/home', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/retable', '/it/casa', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/retable', '/es/casa', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/retable']
+  // routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/retable', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/retable', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/retable', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/retable', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/retable', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/retable']
   // },
   modules: [
     'nuxt-fontawesome',
@@ -63,9 +63,9 @@ module.exports = {
         { code: 'de', iso: 'de-DE', file: de }
       ],
       defaultLocale: 'fr',
-      rootRedirect: '/fr/accueil',
+      rootRedirect: null,
       vueI18n: {
-        fallbackLocale: 'en',
+        fallbackLocale: 'fr',
         messages: {
           en: en,
           fr: fr,
@@ -74,59 +74,53 @@ module.exports = {
           it: it
         }
       },
-      strategy: 'prefix',
+      strategy: 'prefix_except_default',
       lazy: false,
       pages: {
         index: {
-          en: '/home', // -> accessible at /about-us (no prefix since it's the default locale)
-          fr: '/accueil', // -> accessible at /fr/a-propos
-          es: '/casa', // -> accessible at /es/sobre
-          de: '/home', // -> accessible at /es/sobre
-          it: '/casa' // -> accessible at /es/sobre
+          en: '/',
+          fr: '/',
+          de: '/',
+          it: '/'
         },
         gotiqvantica: {
-          en: '/gotiqvantica', // -> accessible at /about-us (no prefix since it's the default locale)
-          fr: '/gotiqvantica', // -> accessible at /fr/a-propos
-          es: '/gotiqvantica', // -> accessible at /es/sobre
-          de: '/gotiqvantica', // -> accessible at /es/sobre
-          it: '/gotiqvantica' // -> accessible at /es/sobre
+          en: '/gotiqvantica',
+          fr: '/gotiqvantica',
+          es: '/gotiqvantica',
+          de: '/gotiqvantica',
+          it: '/gotiqvantica'
         },
         author: {
-          en: '/author', // -> accessible at /about-us (no prefix since it's the default locale)
-          fr: '/auteur', // -> accessible at /fr/a-propos
-          es: '/autor', // -> accessible at /es/sobre
-          de: '/autor', // -> accessible at /es/sobre
-          it: '/autore' // -> accessible at /es/sobre
+          en: '/author',
+          fr: '/auteur',
+          es: '/autor',
+          de: '/autor',
+          it: '/autore'
         },
         excerpt: {
-          en: '/excerpt', // -> accessible at /about-us (no prefix since it's the default locale)
-          fr: '/extraits', // -> accessible at /fr/a-propos
-          es: '/extracto', // -> accessible at /es/sobre
-          de: '/Auszug', // -> accessible at /es/sobre
-          it: '/estratto' // -> accessible at /es/sobre
+          en: '/excerpt',
+          fr: '/extraits',
+          es: '/extracto',
+          de: '/Auszug',
+          it: '/estratto'
         },
         forum: {
-          en: '/forum', // -> accessible at /about-us (no prefix since it's the default locale)
-          fr: '/forum', // -> accessible at /fr/a-propos
-          es: '/forum', // -> accessible at /es/sobre
-          de: '/forum', // -> accessible at /es/sobre
-          it: '/forum' // -> accessible at /es/sobre
+          en: '/forum',
+          fr: '/forum',
+          es: '/forum',
+          de: '/forum',
+          it: '/forum'
         },
         contact: {
-          en: '/contact', // -> accessible at /about-us (no prefix since it's the default locale)
-          fr: '/contact', // -> accessible at /fr/a-propos
-          es: '/contactar', // -> accessible at /es/sobre
-          de: '/kontakt', // -> accessible at /es/sobre
-          it: '/contatto' // -> accessible at /es/sobre
+          en: '/contact',
+          fr: '/contact',
+          es: '/contactar',
+          de: '/kontakt',
+          it: '/contatto'
         }
       },
-
-      // By default, custom paths will be encoded using encodeURI method.
-      // This does not work with regexp: "/foo/:slug-:id(\\d+)". If you want to use
-      // regexp in the path, then set this option to false, and make sure you process
-      // path encoding yourself.
       encodePaths: false,
-      seo: false
+      seo: true
 
       // Called right before app's locale changes
       // beforeLanguageSwitch: () => console.log('beforeLanguageSwitch..................'),
@@ -152,7 +146,9 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {
+    color: '#00bfff'
+  },
   /**
    * i18n middleware
    */

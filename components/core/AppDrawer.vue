@@ -29,6 +29,7 @@
               :to="localePath({name: item.name},$i18n.locale)"
               ripple
               active-class="mc-active-class"
+              :class="{'specialLinks': item.name === 'retable' || item.name === 'gotiqvantica'}"
             )
               v-list-tile-action
                 v-icon {{ item.icon }}
@@ -61,3 +62,9 @@
     }
   }
 </script>
+
+<style lang="css" scoped>
+  .specialLinks {
+    color: #00fdff!important;
+  }
+</style>

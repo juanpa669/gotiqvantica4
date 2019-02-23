@@ -14,7 +14,7 @@ v-layout.row
         v-card-title.mx-5 {{ $t('Dialog.selectCountry') }}
         v-divider
         v-card-text
-          v-layout(wrap justify-center align-center)
+          v-layout(wrap justify-center align-center class="selected")
             v-flex(xs6 offset-xs2)
               nuxt-link(:to="switchLocalePath('en')")
                 img(src="/img/lang/flags/en.png")
@@ -100,7 +100,6 @@ export default {
   },
   mounted () {
     if (this.storeLocale) {
-      this.userLocale = this.storeLocale
     }
   },
   methods: {

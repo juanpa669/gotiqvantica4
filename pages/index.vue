@@ -23,7 +23,7 @@
               :key="card.title"
               v-bind="[{ [`xs${card.flex}`]: true, [`lg${card.flex/card.ratio}`]: true }]"
             >
-              <v-card nuxt :to="`localPath('${card.url}')`">
+              <v-card nuxt :to="localePath(card.url)">
                 <v-img
                   :src="card.src"
                   height="275px"
@@ -74,9 +74,9 @@ export default {
   },
   data: () => ({
     cards: [
-      { title: 'Rina Sestito Arce', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12, textcolor: 'white', url: 'index', ratio: 1 },
+      { title: 'Rina Sestito Arce', src: '/img/main/contact/chevalier.png', flex: 12, textcolor: 'white', url: 'author', ratio: 1 },
       { title: 'Gotiqvantica', src: '/img/main/book/livre-320w.jpg', flex: 12, textcolor: 'white', url: 'gotiqvantica', ratio: 2 },
-      { title: 'Le retable d’Issenheim', src: '/img/main/book/retable.png', flex: 12, textcolor: 'black', url: 'retable', ratio: 2 }
+      { title: 'Le retable d’Issenheim', src: '/img/main/book/retable.png', flex: 12, textcolor: 'white', url: 'retable', ratio: 2 }
     ]
   }),
   head () {
@@ -102,5 +102,9 @@ export default {
   .photo {
     border-radius: 50%;
 
+  }
+  .headline {
+    background-color:rgba(0,0,0,.5);
+    padding: 10px;
   }
 </style>
