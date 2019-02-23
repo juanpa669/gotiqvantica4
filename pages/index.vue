@@ -23,7 +23,7 @@
               :key="card.title"
               v-bind="[{ [`xs${card.flex}`]: true, [`lg${card.flex/card.ratio}`]: true }]"
             >
-              <v-card nuxt :to="`${$i18n.locale}/${card.url}`">
+              <v-card nuxt :to="`localPath('${card.url}')`">
                 <v-img
                   :src="card.src"
                   height="275px"
