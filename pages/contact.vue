@@ -105,7 +105,7 @@ import addSnotify from '~/mixins/addSnotification.js'
 export default {
   name: 'ContactForm',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
   data: () => ({
     contact: {
@@ -123,7 +123,7 @@ export default {
       title: this.$t('Contact.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Contact.meta.description') },
-        { name: 'keywords', content: this.$t('Contact.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Contact.meta.keywords') }
       ]
     }
   },

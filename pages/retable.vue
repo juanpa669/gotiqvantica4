@@ -39,14 +39,14 @@
 export default {
   name: 'RetablePage',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
   head () {
     return {
       title: this.$t('Retable.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Retable.meta.description') },
-        { name: 'keywords', content: this.$t('Retable.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Retable.meta.keywords') }
       ]
     }
   },

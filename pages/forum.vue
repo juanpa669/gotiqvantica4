@@ -77,7 +77,7 @@ import SocialSharing from 'vue-social-sharing'
 export default {
   name: 'forum',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
 
   components: {
@@ -88,7 +88,7 @@ export default {
       title: this.$t('Forum.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Forum.meta.description') },
-        { name: 'keywords', content: this.$t('Forum.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Forum.meta.keywords') }
       ]
     }
   },

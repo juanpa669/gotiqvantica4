@@ -55,14 +55,14 @@
 export default {
   name: 'ExtraitsView',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
   head () {
     return {
       title: this.$t('Excerpt.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Excerpt.meta.description') },
-        { name: 'keywords', content: this.$t('Excerpt.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Excerpt.meta.keywords') }
       ]
     }
   }

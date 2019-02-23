@@ -60,7 +60,7 @@ import SocialSharing from 'vue-social-sharing'
 export default {
   name: 'GotiqvanticaPage',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
   components: {
     SocialSharing
@@ -70,7 +70,7 @@ export default {
       title: this.$t('Home.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Home.meta.description') },
-        { name: 'keywords', content: this.$t('Home.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') }
       ]
     }
   },

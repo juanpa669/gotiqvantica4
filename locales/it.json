@@ -11,7 +11,7 @@
         "name": "index"
       },
       {
-        "icon": "bubble_chart",
+        "icon": "library_books",
         "title": "Gotiqvantica - Il Libro",
         "to": "/gotiqvantica",
         "name": "gotiqvantica"

@@ -58,7 +58,7 @@
 export default {
   name: 'author',
   nuxtI18n: {
-    locales: ['en', 'fr', 'es', 'it', 'es']
+    locales: ['en', 'fr', 'es', 'it', 'de']
   },
   data () {
     return {
@@ -71,7 +71,7 @@ export default {
       title: this.$t('Author.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Author.meta.description') },
-        { name: 'keywords', content: this.$t('Author.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Author.meta.keywords') }
       ]
     }
   },
