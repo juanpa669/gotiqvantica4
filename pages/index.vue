@@ -4,11 +4,11 @@
 <v-layout justify-center>
     <v-flex xs12 sm6>
       <v-toolbar color="indigo" dark>
-        <v-toolbar-side-icon></v-toolbar-side-icon>
+        <v-toolbar-side-icon @click="onClick"></v-toolbar-side-icon>
         <v-toolbar-title v-t="'Home.title'"></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn icon>
-          <v-icon>search</v-icon>
+          <v-icon>public</v-icon>
         </v-btn>
       </v-toolbar>
       <v-hover>
@@ -42,11 +42,10 @@
                     </v-layout>
                   </v-container>
                 </v-img>
-
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn icon>
-                    <v-icon color="red">favorite</v-icon>
+                    <v-icon>favorite</v-icon>
                   </v-btn>
                   <v-btn icon>
                     <v-icon>bookmark</v-icon>
@@ -105,6 +104,11 @@ export default {
   },
   mounted () {
     // return this.$store.commit('setLocale', 'en')
+  },
+  methods: {
+    onClick () {
+      this.$store.commit('toggleDrawer')
+    }
   }
 }
 </script>

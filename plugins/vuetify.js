@@ -26,7 +26,8 @@ Vue.use(Vuetify, {
     'facebook': 'fab fa-facebook-f',
     'google': 'fab fa-google-plus',
     'pinterest': 'fab fa-pinterest',
-    'twitter': 'fab fa-twitter'
+    'twitter': 'fab fa-twitter',
+    'instagram': 'fab fa-instagram'
   },
   components: {
     VApp,
