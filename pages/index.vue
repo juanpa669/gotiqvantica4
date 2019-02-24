@@ -11,8 +11,10 @@
           <v-icon>search</v-icon>
         </v-btn>
       </v-toolbar>
-
-      <v-card>
+      <v-hover>
+      <v-card
+      slot-scope="{ hover }"
+      :class="`elevation-${hover ? 12 : 2}`">
         <v-container
           fluid
           grid-list-md
@@ -44,7 +46,7 @@
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn icon>
-                    <v-icon>favorite</v-icon>
+                    <v-icon color="red">favorite</v-icon>
                   </v-btn>
                   <v-btn icon>
                     <v-icon>bookmark</v-icon>
@@ -54,10 +56,12 @@
                   </v-btn>
                 </v-card-actions>
               </v-card>
+
             </v-flex>
           </v-layout>
         </v-container>
       </v-card>
+      </v-hover>
     </v-flex>
   </v-layout>
 <!-- ********** template ******************* -->
@@ -84,7 +88,13 @@ export default {
       title: this.$t('Home.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Home.meta.description') },
-        { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') },
+        { name: 'og:url', property: 'og:url', content: this.$route.fullPath },
+        { name: 'og:title', 'property': 'og:title', 'content': this.$t('Home.meta.title') },
+        { name: 'og:description', 'property': 'og:description', 'content': this.$t('Home.meta.description').replace(/<\/?[^>]+(>|$)/g, '') },
+        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' },
+        { name: 'twitter:title', property: 'twitter:title', content: this.$t('Home.meta.title') },
+        { name: 'twitter:description', property: 'twitter:description', content: this.$t('Home.meta.description') }
       ]
     }
   },

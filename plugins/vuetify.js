@@ -8,6 +8,8 @@ import Vuetify, {
   VApp, // required
   VNavigationDrawer,
   VFooter,
+  VHover,
+  VCard,
   VToolbar,
   VIcon,
   VBtn
@@ -30,6 +32,8 @@ Vue.use(Vuetify, {
     VApp,
     VNavigationDrawer,
     VFooter,
+    VHover,
+    VCard,
     VGrid,
     VToolbar,
     VIcon,

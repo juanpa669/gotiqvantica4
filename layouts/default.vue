@@ -101,7 +101,7 @@
           else this.product = value
         } else {
           if (typeof value === 'string') this.product = this.gotiqvantica
-            this.product = this.gotiqvantica
+          this.product = this.gotiqvantica
         }
         this.dialog = true
       },

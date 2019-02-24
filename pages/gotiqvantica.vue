@@ -29,7 +29,7 @@ v-container(fluid grid-list-xs)
               )
             v-flex(xs12 text-xs-center pa-2)
               div.text-xs-center
-                v-rating(v-model="rating" @click="alert('click')")
+                v-rating(color="yellow" v-model="rating")
 
 
       transition(name="mcRight" appear mode="in-out")
@@ -70,13 +70,19 @@ export default {
       title: this.$t('Home.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Home.meta.description') },
-        { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') },
+        { name: 'og:url', property: 'og:url', content: this.$route.fullPath },
+        { name: 'og:title', 'property': 'og:title', 'content': this.$t('Home.meta.title') },
+        { name: 'og:description', 'property': 'og:description', 'content': this.$t('Home.meta.description').replace(/<\/?[^>]+(>|$)/g, '') },
+        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' },
+        { name: 'twitter:title', property: 'twitter:title', content: this.$t('Home.meta.title') },
+        { name: 'twitter:description', property: 'twitter:description', content: this.$t('Home.meta.description') }
       ]
     }
   },
   data () {
     return {
-      rating: 4,
+      rating: 5,
       dialog: false,
       videoDialog: false,
       card: {

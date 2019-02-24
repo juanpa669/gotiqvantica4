@@ -62,7 +62,13 @@ export default {
       title: this.$t('Excerpt.meta.title'),
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Excerpt.meta.description') },
-        { hid: 'keywords', name: 'keywords', content: this.$t('Excerpt.meta.keywords') }
+        { hid: 'keywords', name: 'keywords', content: this.$t('Excerpt.meta.keywords') },
+        { name: 'og:url', property: 'og:url', content: this.$route.fullPath },
+        { name: 'og:title', 'property': 'og:title', 'content': this.$t('Excerpt.meta.title') },
+        { name: 'og:description', 'property': 'og:description', 'content': this.$t('Excerpt.meta.description').replace(/<\/?[^>]+(>|$)/g, '') },
+        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' },
+        { name: 'twitter:title', property: 'twitter:title', content: this.$t('Excerpt.meta.title') },
+        { name: 'twitter:description', property: 'twitter:description', content: this.$t('Excerpt.meta.description') }
       ]
     }
   }

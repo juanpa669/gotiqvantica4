@@ -24,14 +24,14 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'GOTIQCANTICA: Le secret des Cathédrales gothiques par Rina Sestito Arce',
+    title: 'GOTIQCANTICA: Les Cathédrales gothiques par Rina Sestito Arce',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'GOTIQCANTICA: Le secret des Cathédrales gothiques par Rina Sestito Arce'
+        content: 'GOTIQCANTICA: Est un livre écrit  par Rina Sestito Arce, qui nous dévoile Le secret des Cathédrales gothiques, ses côtés ésotérique et sa part de mystère. Découvrez ou redécouvrez les cathédrales gothiques sous un angle différent, entrez et laissez-vous guider.'
       }
     ],
     link: [
@@ -52,7 +52,6 @@ module.exports = {
     // Vue Snotify notifications
     '~/plugins/snotify.js'
     // font awesome icons
-    // '~/plugins/fa.js'
   ],
   // generate: {
   // routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/le-retable-d-issenheim', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/le-retable-d-issenheim', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/le-retable-d-issenheim', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/le-retable-d-issenheim', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/le-retable-d-issenheim', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/le-retable-d-issenheim']
@@ -191,7 +190,7 @@ module.exports = {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude:['/(node_modules)/', '/locales/']
+          exclude: ['/(node_modules)/', '/locales/']
         },
         {
           test: /\.pug$/,
