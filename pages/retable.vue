@@ -62,6 +62,7 @@ export default {
   },
   methods: {
     purchase () {
+      console.log('event emitted!', JSON.stringify(this.product))
       this.$_bus.$emit('onPurchase', this.product)
     }
   }

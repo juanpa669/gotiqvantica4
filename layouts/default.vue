@@ -54,11 +54,9 @@
     mounted () {
       this.$_bus.$on('onPurchase', this.onPurchase)
       this.$_bus.$on('localeChanged', this.updateLocale)
-      this.$_bus.$on('localeChanged', this.traduction)
     },
     beforeDestroy () {
       this.$_bus.$off('onPurchase')
-      this.$_bus.$off('localeChanged')
       this.$_bus.$off('localeChanged')
     },
     watch: {
@@ -103,7 +101,7 @@
           else this.product = value
         } else {
           if (typeof value === 'string') this.product = this.gotiqvantica
-          this.product = this.gotiqvantica
+            this.product = this.gotiqvantica
         }
         this.dialog = true
       },
