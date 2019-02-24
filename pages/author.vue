@@ -70,14 +70,17 @@ export default {
     return {
       title: this.$t('Author.meta.title'),
       meta: [
-        { hid: 'description', name: 'description', content: this.$t('Author.meta.description') },
-        { hid: 'keywords', name: 'keywords', content: this.$t('Author.meta.keywords') },
-        { name: 'og:url', property: 'og:url', content: this.$route.fullPath },
-        { name: 'og:title', 'property': 'og:title', 'content': this.$t('Author.meta.title') },
-        { name: 'og:description', 'property': 'og:description', 'content': this.$t('Author.meta.description').replace(/<\/?[^>]+(>|$)/g, '') },
-        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' },
-        { name: 'twitter:title', property: 'twitter:title', content: this.$t('Author.meta.title') },
-        { name: 'twitter:description', property: 'twitter:description', content: this.$t('Author.meta.description') }
+        { hid: 'description', name: 'description', content: this.$t('Autor.meta.description') },
+        { hid: 'keywords', name: 'keywords', content: this.$t('Autor.meta.keywords') },
+        { name: 'twitter:card', content: this.$t('Autor.meta.description') },
+        { name: 'twitter:site', content: '@juanpa' },
+        { name: 'twitter:creator', content: '@Rina' },
+        { name: 'twitter:title', content: this.$t('Autor.meta.title') },
+        { name: 'twitter:description', content: this.$t('Autor.meta.description') },
+        { name: 'og:url', content: this.$route.fullPath },
+        { name: 'og:title', content: this.$t('Autor.meta.title') },
+        { name: 'og:description', content: this.$t('Autor.meta.description') },
+        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' }
       ]
     }
   },

@@ -72,12 +72,15 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Erratum.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Erratum.meta.keywords') },
-        { name: 'og:url', property: 'og:url', content: this.$route.fullPath },
-        { name: 'og:title', 'property': 'og:title', 'content': this.$t('Erratum.meta.title') },
-        { name: 'og:description', 'property': 'og:description', 'content': this.$t('Erratum.meta.description').replace(/<\/?[^>]+(>|$)/g, '') },
-        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' },
-        { name: 'twitter:title', property: 'twitter:title', content: this.$t('Erratum.meta.title') },
-        { name: 'twitter:description', property: 'twitter:description', content: this.$t('Erratum.meta.description') }
+        { name: 'twitter:card', content: this.$t('Erratum.meta.description') },
+        { name: 'twitter:site', content: '@juanpa' },
+        { name: 'twitter:creator', content: '@Rina' },
+        { name: 'twitter:title', content: this.$t('Erratum.meta.title') },
+        { name: 'twitter:description', content: this.$t('Erratum.meta.description') },
+        { name: 'og:url', content: this.$route.fullPath },
+        { name: 'og:title', content: this.$t('Erratum.meta.title') },
+        { name: 'og:description', content: this.$t('Erratum.meta.description') },
+        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' }
       ]
     }
   },
