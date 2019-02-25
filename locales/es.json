@@ -70,6 +70,16 @@
       "keywords": "catedrales góticas, catedral, gótico, esotérico, alquimia, cuántica, física cuántica, grial, templario"
     }
   },
+  "Author": {
+    "title": "Biografia",
+    "biography": "<p class=\"extraits extraits-first\"> Licenciada en Letras en la Universidad de Ginebra, Rina SESTITO ARCE siempre ha sido aficionada en arte, historia y arqueología. En principio profesora en el Segundario, se alista en el Servicio de Protocolo de Ginebra. </p><p class = \"extraits\"> Luego, se va a Alsacia para seguir la carrera de su esposo y descubre la ciudad de Colmar al lado de sus tres hijos. Unos años más tarde, deseosa de volver a tener una actividad, descubre las medicinas denominadas como alternativas: intrigada se matricula a varios cursos de formaciones, de los cuales la quinesiología y la descodificación biológica de las enfermedades y de los acontecimientos de vida. </p><p class = \"extraits extraits-first\"> Mientras tanto, es traductora-intérprete para el Tribunal  de Gran Instancia de Colmar y en el momento de prestar juramento, se encuentra con una compañera que le informa de que la Oficina de Turismo está en busca desesperadamente de guías que hablen italiano: se apunta con mucho interés porque así tiene la oportunidad de interactuar con personas de diferentes edades y de diferentes procedencias geográficas y culturales para introducirlas en el rico y agitado pasado del sitio.</p><p class = \"extraits extraits-first\"> Esta actividad de guía se convierte en un pretexto para emprender investigaciones sobre el arte y la historia, pero también sobre tradiciones y leyendas. Hasta el día en el que hace un lapsus al escribir en el motor de búsqueda de su ordenador \"argotica\": se le aparece entonces un artículo en lengua italiana que trata de la dimensión esotérica de la catedral gótica y este descubrimiento ya no la dejará más.</p> <p class = \"extraits extraits-first\"> Libros, conferencias en internet y cursillos: todo vale para seguir su nueva pasión: las terapias paralelas, las ciudades antiguas, el lenguaje de los pájaros, el esoterismo, la alquimia, las experiencias de muerte inminentes y la física cuántica. Y pensar que al principio, en calidad de guía, lo que más le aburría era explicar la catedral… </p>",
+    "pageTitle": "Sobre el Autor",
+    "meta": {
+      "title": "GOTIQCANTICA - Sobre el Autor",
+      "description": "Gotiqvantica, el libro que le ofrece una lectura esotérica de las catedrales góticas, que combina la cantidad física, la alquimia y la búsqueda del Grial.",
+      "keywords": "esoterismo, catedral, gótico, catedrales góticas, alquimia, cuántica, física cuántica, grial, templario"
+    }
+  },
   "Contact": {
     "meta": {
       "title": "GOTIQCANTICA - Libro sobre lectura esotérica de catedrales góticas",
@@ -212,15 +222,5 @@
   "bookDescription": "In this work are cited various European Gothic cathedrals to illustrate this esoteric language made of symbols, geometry, statuary, proportions or orientation. And it turns out that this language comes from knowledge of ancient civilizations, in particular Celtic, Egyptian, Hebrew, Greek, Sufi or Hindu.",
   "socialShare": "Compartir",
   "translation": "Traducido por ",
-  "updateTxt": "Nuevo contenido! ¡Vuelva a cargar la página o cierre y abra su navegador nuevamente para cargar el nuevo contenido!",
-  "Author": {
-    "title": "Biografia",
-    "biography": "<p class=\"extraits extraits-first\"> Licenciada en Letras en la Universidad de Ginebra, Rina SESTITO ARCE siempre ha sido aficionada en arte, historia y arqueología. En principio profesora en el Segundario, se alista en el Servicio de Protocolo de Ginebra. </p><p class = \"extraits\"> Luego, se va a Alsacia para seguir la carrera de su esposo y descubre la ciudad de Colmar al lado de sus tres hijos. Unos años más tarde, deseosa de volver a tener una actividad, descubre las medicinas denominadas como alternativas: intrigada se matricula a varios cursos de formaciones, de los cuales la quinesiología y la descodificación biológica de las enfermedades y de los acontecimientos de vida. </p><p class = \"extraits extraits-first\"> Mientras tanto, es traductora-intérprete para el Tribunal  de Gran Instancia de Colmar y en el momento de prestar juramento, se encuentra con una compañera que le informa de que la Oficina de Turismo está en busca desesperadamente de guías que hablen italiano: se apunta con mucho interés porque así tiene la oportunidad de interactuar con personas de diferentes edades y de diferentes procedencias geográficas y culturales para introducirlas en el rico y agitado pasado del sitio.</p><p class = \"extraits extraits-first\"> Esta actividad de guía se convierte en un pretexto para emprender investigaciones sobre el arte y la historia, pero también sobre tradiciones y leyendas. Hasta el día en el que hace un lapsus al escribir en el motor de búsqueda de su ordenador \"argotica\": se le aparece entonces un artículo en lengua italiana que trata de la dimensión esotérica de la catedral gótica y este descubrimiento ya no la dejará más.</p> <p class = \"extraits extraits-first\"> Libros, conferencias en internet y cursillos: todo vale para seguir su nueva pasión: las terapias paralelas, las ciudades antiguas, el lenguaje de los pájaros, el esoterismo, la alquimia, las experiencias de muerte inminentes y la física cuántica. Y pensar que al principio, en calidad de guía, lo que más le aburría era explicar la catedral… </p>",
-    "pageTitle": "Sobre el Autor",
-    "meta": {
-      "title": "GOTIQCANTICA - Sobre el Autor",
-      "description": "Gotiqvantica, el libro que le ofrece una lectura esotérica de las catedrales góticas, que combina la cantidad física, la alquimia y la búsqueda del Grial.",
-      "keywords": "esoterismo, catedral, gótico, catedrales góticas, alquimia, cuántica, física cuántica, grial, templario"
-    }
-  }
+  "updateTxt": "Nuevo contenido! ¡Vuelva a cargar la página o cierre y abra su navegador nuevamente para cargar el nuevo contenido!"
 }

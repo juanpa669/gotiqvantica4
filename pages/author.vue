@@ -70,19 +70,21 @@ export default {
     return {
       title: this.$t('Author.meta.title'),
       meta: [
-        { hid: 'description', name: 'description', content: this.$t('Autor.meta.description') },
-        { hid: 'keywords', name: 'keywords', content: this.$t('Autor.meta.keywords') },
-        { name: 'twitter:card', property: 'twitter:card',  content: this.$t('Autor.meta.description') },
-        { name: 'twitter:site', property: 'twitter:site', content: '@juanpa' },
-        { name: 'twitter:creator', property: 'twitter:creator', content: '@Rina' },
-        { name: 'twitter:title', property: 'twitter:title', content: this.$t('Autor.meta.title') },
-        { name: 'twitter:description', property: 'twitter:description', content: this.$t('Autor.meta.description') },
-        { name: 'twitter:image', property: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { name: 'og:url', property: 'og:url', content: 'https://cathedrale-gothique.com/author' },
-        { name: 'og:title', property: 'og:title', content: this.$t('Autor.meta.title') },
-        { name: 'og:description', property: 'og:description', content: this.$t('Autor.meta.description') },
-        { name: 'og:image', property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { name: 'fb:app_id', property: 'fb:app_id', content: '2008683959352956' }
+        { hid: 'description', name: 'description', content: this.$t('Author.meta.description') },
+        { hid: 'keywords', name: 'keywords', content: this.$t('Author.meta.keywords') },
+        { name: 'twitter:card', content: this.$t('Author.meta.description') },
+        { name: 'twitter:site', content: '@juanpa' },
+        { name: 'twitter:creator', content: '@Rina' },
+        { name: 'twitter:title', content: this.$t('Author.meta.title') },
+        { name: 'twitter:description', content: this.$t('Author.meta.description') },
+        { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
+        { property: 'og:title', content: this.$t('Home.mainTitle') },
+        { property: 'og:type', content: 'book' },
+        { property: 'og:url', content: 'https://cathedrale-gothique.com/author' },
+        { property: 'og:title', content: this.$t('Author.meta.title') },
+        { property: 'og:description', content: this.$t('Author.meta.description') },
+        { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
+        { property: 'fb:app_id', content: '2008683959352956' }
 
       ]
     }
