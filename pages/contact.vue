@@ -133,7 +133,6 @@ export default {
         { property: 'og:title', content: this.$t('Home.mainTitle') },
         { property: 'og:type', content: 'book' },
         { property: 'og:url', content: 'https://cathedrale-gothique.com/contact' },
-        { property: 'og:title', content: this.$t('Contact.meta.title') },
         { property: 'og:description', content: this.$t('Contact.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'fb:app_id', content: '2008683959352956' }

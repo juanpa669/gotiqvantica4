@@ -70,7 +70,6 @@ export default {
         { name: 'twitter:description', content: this.$t('Excerpt.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:url', content: 'https://cathedrale-gothique.com/excerpt' },
-        { property: 'og:title', content: this.$t('Excerpt.meta.title') },
         { property: 'og:description', content: this.$t('Excerpt.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
