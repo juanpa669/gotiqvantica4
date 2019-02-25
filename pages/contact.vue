@@ -124,15 +124,17 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Contact.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Contact.meta.keywords') },
-        { name: 'twitter:card', content: this.$t('Contact.meta.description') },
-        { name: 'twitter:site', content: '@juanpa' },
-        { name: 'twitter:creator', content: '@Rina' },
-        { name: 'twitter:title', content: this.$t('Contact.meta.title') },
-        { name: 'twitter:description', content: this.$t('Contact.meta.description') },
-        { name: 'og:url', content: 'https://cathedrale-gothique.com/contact' },
-        { name: 'og:title', content: this.$t('Contact.meta.title') },
-        { name: 'og:description', content: this.$t('Contact.meta.description') },
-        { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/retable.png' }
+        { name: 'twitter:card', property: 'twitter:card',  content: this.$t('Contact.meta.description') },
+        { name: 'twitter:site', property: 'twitter:site', content: '@juanpa' },
+        { name: 'twitter:creator', property: 'twitter:creator', content: '@Rina' },
+        { name: 'twitter:title', property: 'twitter:title', content: this.$t('Contact.meta.title') },
+        { name: 'twitter:description', property: 'twitter:description', content: this.$t('Contact.meta.description') },
+        { name: 'twitter:image', property: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
+        { name: 'og:url', property: 'og:url', content: 'https://cathedrale-gothique.com/contact' },
+        { name: 'og:title', property: 'og:title', content: this.$t('Contact.meta.title') },
+        { name: 'og:description', property: 'og:description', content: this.$t('Contact.meta.description') },
+        { name: 'og:image', property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
+        { name: 'fb:app_id', property: 'fb:app_id', content: '2008683959352956' }
       ]
     }
   },

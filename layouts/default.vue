@@ -22,13 +22,6 @@
 
   export default {
     name: 'layoutComponent',
-    head () {
-      return {
-        meta: [
-          { name: 'fb:app_id', property: 'fb:app_id', content: '2008683959352956' }
-        ]
-      }
-    },
     data () {
       return {
         traductor: null,
