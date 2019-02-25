@@ -77,7 +77,7 @@ export default {
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Autor.meta.title') },
         { name: 'twitter:description', content: this.$t('Autor.meta.description') },
-        { name: 'og:url', content: this.$route.fullPath },
+        { name: 'og:url', content: 'https://cathedrale-gothique.com/author' },
         { name: 'og:title', content: this.$t('Autor.meta.title') },
         { name: 'og:description', content: this.$t('Autor.meta.description') },
         { name: 'og:image', 'property': 'og:image', 'content': 'https://cathedrale-gothique.com/img/main/book/livre-320w@2x.jpg' }
