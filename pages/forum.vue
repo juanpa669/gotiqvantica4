@@ -95,11 +95,11 @@ export default {
         { name: 'twitter:title', property: 'twitter:title', content: this.$t('Forum.meta.title') },
         { name: 'twitter:description', property: 'twitter:description', content: this.$t('Forum.meta.description') },
         { name: 'twitter:image', property: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { name: 'og:url', property: 'og:url', content: 'https://cathedrale-gothique.com/forum' },
-        { name: 'og:title', property: 'og:title', content: this.$t('Forum.meta.title') },
-        { name: 'og:description', property: 'og:description', content: this.$t('Forum.meta.description') },
-        { name: 'og:image', property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { name: 'fb:app_id', property: 'fb:app_id', content: '2008683959352956' }
+        { property: 'og:url', content: 'https://cathedrale-gothique.com/forum' },
+        { property: 'og:title', content: this.$t('Forum.meta.title') },
+        { property: 'og:description', content: this.$t('Forum.meta.description') },
+        { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
+        { property: 'fb:app_id', content: '2008683959352956' }
       ]
     }
   },
