@@ -23,7 +23,7 @@ export default {
     return {
       items: [
         { id: 1, name: this.$t('Toolbar.items[0].title'), url: 'index', stars: 5, image: '/img/main/contact/chevalier.png' },
-        { id: 2, name: this.$t('Toolbar.items[1].title'), url: 'gotiqvantica', stars: 5, image: '/img/main/book/livre-320w@2x.jpg' },
+        { id: 2, name: this.$t('Toolbar.items[1].title'), url: 'gotiqvantica', stars: 5, image: '/img/main/book/livre-fb.jpg' },
         { id: 3, name: this.$t('Toolbar.items[8].title'), url: 'retable', stars: 5, image: '/img/main/book/retable.png' }
       ]
     }

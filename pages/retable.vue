@@ -54,10 +54,12 @@ export default {
         { name: 'twitter:description', content: this.$t('Retable.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
-        { property: 'og:type', content: 'book' },
+        { property: 'og:type', content="website" },
         { property: 'og:url', content: 'https://www.cathedrale-gothique.com/retable' },
         { property: 'og:description', content: this.$t('Retable.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
+        { property: 'og:width', content: '1200' },
+        { property: 'og:height', content: '630' },
         { property: 'fb:app_id', content: '2008683959352956' }
       ]
     }
