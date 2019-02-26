@@ -42,7 +42,7 @@
             v-btn(
               round
               outline
-              @click.native.stop="$router.go(-1)"
+              @click.native="$router.go(-1)"
               v-t="'Button.back'"
             )
           v-flex.xs4.md2
@@ -80,7 +80,7 @@ export default {
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
         { property: 'og:type', content: 'book' },
-        { property: 'og:url', content: 'https://www.cathedrale-gothique.com/' },
+        { property: 'og:url', content: 'https://www.cathedrale-gothique.com/author' },
         { property: 'og:description', content: this.$t('Author.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'fb:app_id', content: '2008683959352956' }

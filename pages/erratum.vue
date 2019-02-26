@@ -40,7 +40,7 @@
                 small
                 round
                 outline
-                @click.native.stop="initPrint"
+                @click.native="initPrint"
               )
                 | {{ $t('Button.print') }}
     v-layout(v-else row justify-center align-center wrap style="height:50vh")

@@ -11,9 +11,9 @@
       color="light-blue accent-4"
       v-scroll="onScroll"
       v-show="fab"
-      @click="toTop"
+      @click.native="toTop"
     )
-      v-icon keyboard_arrow_up    
+      v-icon keyboard_arrow_up
 </template>
 
 <script>

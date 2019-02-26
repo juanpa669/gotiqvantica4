@@ -24,7 +24,7 @@
                 small
                 absolute
                 fab
-                @click="$router.push('/contact')"
+                @click.native="$router.push('/contact')"
             )
               v-icon add
 
@@ -65,7 +65,7 @@
                           v-btn(
                             icon
                             :disabled="fav"
-                            @click="fav = !fav"
+                            @click.native="fav = !fav"
                             color="light-blue"
                           )
                             v-icon share
@@ -96,7 +96,7 @@ export default {
         { name: 'twitter:title', content: this.$t('Forum.meta.title') },
         { name: 'twitter:description', content: this.$t('Forum.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { property: 'og:url', content: 'https://www.cathedrale-gothique.com/' },
+        { property: 'og:url', content: 'https://www.cathedrale-gothique.com/forum' },
         { property: 'og:title', content: this.$t('Forum.meta.title') },
         { property: 'og:description', content: this.$t('Forum.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },

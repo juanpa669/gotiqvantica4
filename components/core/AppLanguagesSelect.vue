@@ -6,7 +6,7 @@ v-layout.row
       color="black"
       dark
       slot="activator"
-      @click.native.stop="dialog = !dialog"
+      @click.native="dialog = !dialog"
     )
       v-icon language
     v-dialog(v-model="dialog" width="300px")

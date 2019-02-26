@@ -58,6 +58,18 @@
 
             </v-flex>
           </v-layout>
+          <v-layout>
+            <v-flex xs12 text-xs-center pa-4>
+              <div class="fb-like"
+              fb-like data-href="https://www.facebook.com/Rinarce/"
+              data-layout="button_count"
+              data-action="like"
+              data-size="large"
+              data-show-faces="true"
+              data-share="true"
+              ></div>
+            </v-flex>
+          </v-layout>
         </v-container>
       </v-card>
       </v-hover>
