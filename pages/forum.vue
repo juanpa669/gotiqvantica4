@@ -89,8 +89,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Forum.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Forum.meta.keywords') },
-
-        { name: 'twitter:card',  content: this.$t('Forum.meta.description') },
+        { name: 'twitter:card', content: this.$t('Forum.meta.description') },
         { name: 'twitter:site', content: '@juanpa' },
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Forum.meta.title') },
@@ -102,7 +101,7 @@ export default {
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:width', content: '1200' },
         { property: 'og:height', content: '630' },
-        { property: 'og:type', content="website" },
+        { property: 'og:type', content: 'website' },
         { property: 'fb:app_id', content: '2008683959352956' }
       ]
     }

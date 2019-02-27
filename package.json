@@ -4,6 +4,7 @@
   "description": "Gotiqvantita Website by Rina Sestito Arce",
   "author": "macfly <macfly669@gmail.com>",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
