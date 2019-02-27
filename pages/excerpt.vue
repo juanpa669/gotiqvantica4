@@ -72,8 +72,8 @@ export default {
         { property: 'og:url', content: 'https://www.cathedrale-gothique.com/excerpt' },
         { property: 'og:description', content: this.$t('Excerpt.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
-        { property: 'og:width', content: '1200' },
-        { property: 'og:height', content: '630' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
         { property: 'og:type', content: 'website' },
         { property: 'fb:app_id', content: '2008683959352956' }

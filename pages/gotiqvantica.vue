@@ -71,7 +71,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Home.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') },
-        { name: 'twitter:card', content: this.$t('Home.meta.description') },
+        { name: 'twitter:card', content: this.$t('Home.meta.title') },
         { name: 'twitter:site', content: '@juanpa' },
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Home.meta.title') },
@@ -82,8 +82,8 @@ export default {
         { property: 'og:url', content: 'https://www.cathedrale-gothique.com/gotiqvantica' },
         { property: 'og:description', content: this.$t('Home.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
-        { property: 'og:width', content: '1200' },
-        { property: 'og:height', content: '630' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
         { property: 'fb:app_id', content: '2008683959352956' }
       ]
     }

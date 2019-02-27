@@ -19,7 +19,7 @@
     "js-cookie": "^2.2.0",
     "nuxt": "^2.2.0",
     "nuxt-fontawesome": "^0.4.0",
-    "nuxt-i18n": "^5.8.1",
+    "nuxt-i18n": "^5.8.4",
     "nuxt-material-design-icons": "^1.0.4",
     "nuxt-validate": "^0.1.2",
     "vee-validate": "^2.1.7",

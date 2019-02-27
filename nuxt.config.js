@@ -14,7 +14,7 @@ const siteMapRoutes = function () {
         url: currRoute,
         changefreq: 'daily',
         priority: 1,
-        lastmodISO: '2019-02-23T23:43:00.000Z'
+        lastmodISO: '2019-02-27T19:43:00.000Z'
       }
     )
   })
