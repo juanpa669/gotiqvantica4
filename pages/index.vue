@@ -3,9 +3,10 @@
 <!-- ********** template ******************* -->
 <v-layout justify-center>
     <v-flex xs12 sm6>
+      <h1 v-t="'Home.title'"></h1>
       <v-toolbar color="indigo" dark>
         <v-toolbar-side-icon @click="onClick"></v-toolbar-side-icon>
-        <v-toolbar-title v-t="'Home.title'"></v-toolbar-title>
+        <v-toolbar-title></v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn icon>
           <v-icon>public</v-icon>
@@ -55,7 +56,6 @@
                   </v-btn>
                 </v-card-actions>
               </v-card>
-
             </v-flex>
           </v-layout>
           <v-layout>
@@ -112,8 +112,7 @@ export default {
         { property: 'og:description', content: this.$t('Home.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'fb:app_id', content: '2008683959352956' }
+        { property: 'og:image:height', content: '630' }
       ]
     }
   },

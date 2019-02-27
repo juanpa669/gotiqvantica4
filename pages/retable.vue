@@ -1,7 +1,9 @@
 <template lang="pug">
     v-container(fluid grid-list-xs)
       v-layout(row wrap)
-        v-flex(xs12 md6 offset-md2 text-xs-center)
+        v-flex(xs12 text-xs-center)
+          h1 Le retable d’Issenheim, grimoire alchimique pour Compostelle
+        v-flex(xs12 md6 offset-md3 text-xs-center)
             img(
               src="/img/main/book/retable.png"
               alt="retable"
@@ -9,26 +11,22 @@
               width="100%"
               )
       v-layout(row wrap)
-        v-flex(xs12 md6 offset-md2 d-flex )
-          p
-            h1 Le retable d’Issenheim,<br />grimoire alchimique pour Compostelle
+        transition(name="mcRight" appear mode="in-out")
+          v-flex(xs12 md6 offset-md3 id="home-summary")
+            v-card-text(id="livre-retable"  v-html="$t('Retable.text')")
 
-      transition(name="mcRight" appear mode="in-out")
-        v-flex(xs12 lg6 offset-lg2 id="home-summary")
-          v-card-text(id="livre-retable"  v-html="$t('Retable.text')")
-
-          v-card-actions
-            v-layout(row wrap align-center)
-              v-flex(text-xs-center)
-                v-btn(
-                  small
-                  outline
-                  ripple
-                  round
-                  color="white"
-                  @click.native="purchase"
-                  target="_blank"
-                ) {{ $t('Button.buy') }}
+            v-card-actions
+              v-layout(row wrap align-center)
+                v-flex(text-xs-center)
+                  v-btn(
+                    small
+                    outline
+                    ripple
+                    round
+                    color="white"
+                    @click.native="purchase"
+                    target="_blank"
+                  ) {{ $t('Button.buy') }}
       v-spacer
 
 
@@ -59,8 +57,7 @@ export default {
         { property: 'og:description', content: this.$t('Retable.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'fb:app_id', content: '2008683959352956' }
+        { property: 'og:image:height', content: '630' }
       ]
     }
   },
@@ -76,10 +73,14 @@ export default {
   },
   methods: {
     purchase () {
-      console.log('event emitted!', JSON.stringify(this.product))
       this.$_bus.$emit('onPurchase', this.product)
     }
   }
 
 }
 </script>
+<style lang="css" scoped>
+p {
+  font-size: 1.5rem!important;
+}
+</style>

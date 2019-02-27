@@ -1,5 +1,6 @@
 <template lang="pug">
 v-container(grid-list-xs)
+  h1(v-t="'Contact.meta.title'" class="text-xs-center")
   v-flex(xs12 white--text pa-4 id="contact-container" v-cloak)
     v-layout(row wrap align-center)
       v-flex(xs12 lg8 offset-lg2)
@@ -8,7 +9,7 @@ v-container(grid-list-xs)
 
 
         v-card-title
-          v-flex(tag="h1" class="headline text-xs-center white--text") {{ $t('Form.title') }}
+          v-flex(tag="h2" class="text-xs-center white--text") {{ $t('Form.title') }}
           v-flex.xs12
             v-form(ref="form")
               v-text-field(
@@ -136,8 +137,7 @@ export default {
         { property: 'og:description', content: this.$t('Contact.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'fb:app_id', content: '2008683959352956' }
+        { property: 'og:image:height', content: '630' }
       ]
     }
   },
@@ -256,8 +256,8 @@ export default {
   }
 }
 </script>
-<style scoped>
-h1 {
+<style>
+h1, h2, h3, h4, h5, h6 {
   font-family: papyrus!important;
 }
 

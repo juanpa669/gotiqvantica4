@@ -2,11 +2,11 @@
   v-container.grid-list-md
     v-layout(row justify-center align-center)
       v-flex(xs12 text-xs-center key="titleWrapper")
-        h1(class="headline editor-title") {{ $t('Editor.title') }}
+        h1(class="editor-title") {{ $t('Editor.title') }}
     transition(name="mcScale" appear mode="in-out")
       v-flex(xs12 lg4 offset-lg4 key="tooltpWrapper" text-xs-center)
         v-tooltip(class="editor" top)
-          a(href="http://www.editions-saint-honore.com/produit/gotiqvantica/" slot="activator" target="_blank")
+          a(href="https://www.editions-saint-honore.com/produit/gotiqvantica/" slot="activator" target="_blank")
             img(
                 src="/img/main/book/livre-320w.jpg"
                 srcset="/img/main/book/livre-375w.jpg 360w, /img/main/book/livre-600w.jpg 480w, /img/main/book/livre-768w.jpg 768w, /img/main/book/livre-768w@2x.jpg 1280w"
@@ -49,8 +49,7 @@ export default {
         { property: 'og:description', content: this.$t('Editor.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'fb:app_id', content: '2008683959352956' }
+        { property: 'og:image:height', content: '630' }
       ]
     }
   },

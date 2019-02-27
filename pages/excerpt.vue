@@ -36,7 +36,7 @@
           <v-btn
           small
           round
-          href="http://www.editions-saint-honore.com/produit/gotiqvantica/"
+          href="https://www.editions-saint-honore.com/produit/gotiqvantica/"
           target="_blank"
           outline color="white"
           v-t="'Button.buy'"></v-btn>
@@ -75,8 +75,7 @@ export default {
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
-        { property: 'og:type', content: 'website' },
-        { property: 'fb:app_id', content: '2008683959352956' }
+        { property: 'og:type', content: 'website' }
       ]
     }
   }

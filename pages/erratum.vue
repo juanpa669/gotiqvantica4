@@ -3,7 +3,7 @@
     v-layout(row wrap v-if="showErratum")
         v-flex(xs12)
 
-          h2(class="text-xs-center" id="erratum-title") ERRATUM
+          h1(class="text-xs-center" id="erratum-title") ERRATUM
 
         v-flex(xs12 md6 offset-md3)
           p(class="erratum-message" v-html="$t('Erratum.text')")
@@ -84,8 +84,7 @@ export default {
         { property: 'og:description', content: this.$t('Erratum.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
         { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'fb:app_id', content: '2008683959352956' }
+        { property: 'og:image:height', content: '630' }
       ]
     }
   },

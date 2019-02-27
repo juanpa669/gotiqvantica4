@@ -46,21 +46,7 @@
     },
     head () {
       return {
-        title: this.$t('Home.meta.title'),
         meta: [
-          { hid: 'description', name: 'description', content: this.$t('Home.meta.description') },
-          { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') },
-          { name: 'twitter:card', content: 'summary_large_image' },
-          { name: 'twitter:site', content: '@juanpa' },
-          { name: 'twitter:creator', content: '@Rina' },
-          { name: 'twitter:title', content: this.$t('Home.meta.title') },
-          { name: 'twitter:description', content: this.$t('Home.meta.description') },
-          { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-          { property: 'og:title', content: this.$t('Home.mainTitle') },
-          { property: 'og:type', content: 'website' },
-          { property: 'og:url', content: 'https://www.cathedrale-gothique.com/' },
-          { property: 'og:description', content: this.$t('Home.meta.description') },
-          { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
           { property: 'fb:app_id', content: '2008683959352956' }
         ]
       }

@@ -89,7 +89,7 @@ export default {
   methods: {
     gotoHonore () {
       this.closeDialog()
-      window.open(`http://www.editions-saint-honore.com/produit/${this.product.name}/`, '_blank')
+      window.open(`https//www.editions-saint-honore.com/produit/${this.product.name}/`, '_blank')
     },
 
     onPurchase (product) {

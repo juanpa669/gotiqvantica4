@@ -46,7 +46,7 @@ v-container(fluid grid-list-xs)
                   ripple
                   round
                   color="white"
-                  href="http://www.editions-saint-honore.com/produit/gotiqvantica/"
+                  href="https://www.editions-saint-honore.com/produit/gotiqvantica/"
                   target="_blank"
                 ) {{ $t('Button.buy') }}
                 v-spacer
@@ -55,7 +55,7 @@ v-container(fluid grid-list-xs)
 
 <script>
 import SocialSharing from 'vue-social-sharing'
-// import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'GotiqvanticaPage',
@@ -76,15 +76,14 @@ export default {
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Home.meta.title') },
         { name: 'twitter:description', content: this.$t('Home.meta.description') },
-        { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { property: 'og:title', content: this.$t('Home.mainTitle') },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.cathedrale-gothique.com/gotiqvantica' },
-        { property: 'og:description', content: this.$t('Home.meta.description') },
-        { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'fb:app_id', content: '2008683959352956' }
+        { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
+        { hid: 'og:title', property: 'og:title', content: this.$t('Home.mainTitle') },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: `https://www.cathedrale-gothique.com${this.gotiqvanticaFbUrl}` },
+        { hid: 'og:description', property: 'og:description', content: this.$t('Home.meta.description') },
+        { hid: 'og:image', property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
+        { hid: 'og:image:width', property: 'og:image:width', content: '1200' },
+        { hid: 'og:image:height', property: 'og:image:height', content: '630' }
       ]
     }
   },
@@ -103,8 +102,14 @@ export default {
     }
   },
   computed: {
+    ...mapGetters({
+      currentLocale: 'currentLocale'
+    }),
     isSmallMobile () { return this.$nextTick(() => window.innerWidth <= 600) },
-    summaryText () { return this.summary }
+    summaryText () { return this.summary },
+    gotiqvanticaFbUrl () {
+      return this.currentLocale === 'fr' ? '/cathedrales-gothiques' : `/${this.currentLocale}/gotiqvantica`
+    }
   },
 
   mounted () {
