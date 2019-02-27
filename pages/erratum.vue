@@ -72,7 +72,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Erratum.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Erratum.meta.keywords') },
-        { name: 'twitter:card', content: this.$t('Erratum.meta.description') },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@juanpa' },
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Erratum.meta.title') },

@@ -37,7 +37,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Editor.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Editor.meta.keywords') },
-        { name: 'twitter:card', content: this.$t('Editor.meta.description') },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@juanpa' },
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Editor.meta.title') },

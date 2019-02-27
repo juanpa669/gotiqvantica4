@@ -89,7 +89,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Forum.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Forum.meta.keywords') },
-        { name: 'twitter:card', content: this.$t('Forum.meta.description') },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@juanpa' },
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Forum.meta.title') },

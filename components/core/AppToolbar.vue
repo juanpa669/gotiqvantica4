@@ -8,6 +8,12 @@
         v-icon(v-show="playmusic") pause_circle_outline
         v-icon(v-show="!playmusic") play_circle_outline
     AppSocialSpeedDial
+    div(
+    class="fb-like"
+    data-share="true"
+    data-width="250"
+    data-show-faces="true"
+    )
 </template>
 <script>
   import AppSocialSpeedDial from './AppSocialSpeedDial'

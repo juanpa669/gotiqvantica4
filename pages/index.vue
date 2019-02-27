@@ -100,7 +100,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: this.$t('Home.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') },
-        { name: 'twitter:card', content: this.$t('Home.meta.title') },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@juanpa' },
         { name: 'twitter:creator', content: '@Rina' },
         { name: 'twitter:title', content: this.$t('Home.meta.title') },
