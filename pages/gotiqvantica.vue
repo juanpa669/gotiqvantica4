@@ -80,7 +80,7 @@ export default {
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
         { hid: 'og:title', property: 'og:title', content: this.$t('Home.mainTitle') },
         { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:url', property: 'og:url', content: `https://www.cathedrale-gothique.com` },
+        { hid: 'og:url', property: 'og:url', content: `https://www.cathedrale-gothique.com/cathedrales-gothiques` },
         { hid: 'og:description', property: 'og:description', content: this.$t('Home.meta.description') },
         { hid: 'og:image', property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
         { hid: 'og:image:width', property: 'og:image:width', content: '1200' },

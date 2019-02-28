@@ -110,7 +110,7 @@ export default {
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.cathedrale-gothique.com/' },
+        { property: 'og:url', content: 'https://www.cathedrale-gothique.com' },
         { property: 'og:description', content: this.$t('Home.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },
