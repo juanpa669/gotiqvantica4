@@ -52,8 +52,9 @@ module.exports = {
     // Social component
     '~/plugins/social.js',
     // Vue Snotify notifications
-    '~/plugins/snotify.js'
+    '~/plugins/snotify.js',
     // font awesome icons
+    { src: '~/plugins/fb-sdk.js', ssr: false }
   ],
   // generate: {
   // routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/le-retable-d-issenheim', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/le-retable-d-issenheim', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/le-retable-d-issenheim', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/le-retable-d-issenheim', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/le-retable-d-issenheim', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/le-retable-d-issenheim']
