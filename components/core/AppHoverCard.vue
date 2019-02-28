@@ -10,6 +10,7 @@
 
     >
       <v-img
+       :alt="title" :title="title"
         :aspect-ratio="16/9"
         :src="image"
       ></v-img>

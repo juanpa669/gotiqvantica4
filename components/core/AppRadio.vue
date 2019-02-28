@@ -9,7 +9,7 @@
       )
     v-flex
       v-avatar(sizze="32px")
-        img(srrc="/img/icons/lang/flags/en.png")
+        img(srrc="/img/icons/lang/flags/en.png" alt="en" title="Drapeau en")
 </template>
 <script>
 export default {

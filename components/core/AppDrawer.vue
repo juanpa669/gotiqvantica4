@@ -16,7 +16,7 @@
           v-list.pt-2.transparent
             v-list-tile(avatar)
               v-list-tile-avatar
-                img(src="/img/main/author-64.jpg")
+                img(src="/img/main/author-64.jpg" alt="author" title="Biographie de l'auteur")
 
               v-list-tile-content
                 v-list-tile-title Rina SESTITO ARCE

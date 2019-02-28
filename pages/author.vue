@@ -22,6 +22,7 @@
             img(
               src="/img/main/author-64.jpg"
               alt="avatar"
+              title="Biographie de l'auteur"
             )
         div
           div.headline Rina SESTITO ARCE

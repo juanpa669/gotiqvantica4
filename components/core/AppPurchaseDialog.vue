@@ -9,7 +9,7 @@
       v-card-text
         v-flex(v-html="$t('Dialog.alert')").text-xs-center
         v-flex(text-xs-center mt-2)
-          img(src="/img/icons/st-honore.jpg" alt="amazon" width="150px")
+          img(src="/img/icons/st-honore.jpg" alt="amazon" title="Acheter sur amazon" width="150px")
 
       v-card-actions
         v-layout
@@ -32,7 +32,7 @@
             :href="product.amazonUrl"
             target="_blank"
           )
-            img(src="/img/icons/amazon-icon-22.png" alt="amazon" width="75px")
+            img(src="/img/icons/amazon-icon-22.png" alt="amazon" title="Acheter sur amazon" width="75px")
 
         v-flex.xs2
           v-btn(
@@ -41,7 +41,7 @@
             icon
             :href="product.fnacUrl" target="_blank"
           )
-            img(src="/img/icons/logo-fnac.png" alt="amazon" width="50px")
+            img(src="/img/icons/logo-fnac.png" alt="fnac" title="Acheter à la fnac" width="50px")
       v-layout(justify-center wrap)
         v-flex.xs4
           v-btn(

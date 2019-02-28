@@ -7,6 +7,7 @@
             img(
               src="/img/main/book/retable.png"
               alt="retable"
+              title="Le retable d'Issenheim, grimoire alchimique pour Compostelle"
               id="retable"
               width="100%"
               )

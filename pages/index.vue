@@ -30,6 +30,8 @@
                 <v-img
                   :src="card.src"
                   height="275px"
+                  :alt="card.title"
+                  :title="card.title"
                 >
                   <v-container
                     fill-height

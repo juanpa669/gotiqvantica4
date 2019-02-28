@@ -11,6 +11,7 @@
                 src="/img/main/book/livre-320w.jpg"
                 srcset="/img/main/book/livre-375w.jpg 360w, /img/main/book/livre-600w.jpg 480w, /img/main/book/livre-768w.jpg 768w, /img/main/book/livre-768w@2x.jpg 1280w"
                 alt="book"
+                title="Livre sur les cathedrales gothiques"
                 id="publisher"
                 width="100%"
               )
