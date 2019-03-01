@@ -4,6 +4,6 @@ export default function ({
 }) {
   // If the user is not authenticated
   if (!store.state.auth) {
-    return redirect('/')
+    // return redirect('/')
   }
 }

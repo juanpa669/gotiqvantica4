@@ -24,7 +24,7 @@
         <v-icon>close</v-icon>
       </v-btn>
     <social-sharing
-    url="https://cathedrale-gothique.com/"
+    url="https://cathedrale-gothique.com"
     :title="$t('bookTitle')"
     :description="$t('bookDescription')"
     :quote="$t('Home.sentence')"

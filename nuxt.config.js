@@ -34,12 +34,18 @@ module.exports = {
         content: 'GOTIQCANTICA: Est un livre écrit  par Rina Sestito Arce, qui nous dévoile Le secret des Cathédrales gothiques, ses côtés ésotérique et sa part de mystère. Découvrez ou redécouvrez les cathédrales gothiques sous un angle différent, entrez et laissez-vous guider.'
       }
     ],
+    script: [
+      {
+        src: 'https://connect.facebook.net/fr_FR/sdk.js',
+        defer: true
+      },
+      { src: './js/fb-sdk.js' }
+    ],
     link: [
       { rel: 'canonical', href: 'https://cathedrale-gothique.com' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
-      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' },
-      {}
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
     ]
   },
   plugins: [
@@ -52,9 +58,8 @@ module.exports = {
     // Social component
     '~/plugins/social.js',
     // Vue Snotify notifications
-    '~/plugins/snotify.js',
+    '~/plugins/snotify.js'
     // font awesome icons
-    { src: '~/plugins/fb-sdk.js', ssr: false }
   ],
   // generate: {
   // routes: ['/', '/gotiqvantica', '/author', '/excerpt', '/forum', '/contact', '/publisher', '/le-retable-d-issenheim', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/le-retable-d-issenheim', '/fr', '/fr/gotiqvantica', '/fr/author', '/fr/excerpt', '/fr/forum', '/fr/contact', '/fr/publisher', '/fr/le-retable-d-issenheim', '/de', '/de/gotiqvantica', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/le-retable-d-issenheim', '/it', '/it/gotiqvantica', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/le-retable-d-issenheim', '/es', '/es/gotiqvantica', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/le-retable-d-issenheim']
@@ -176,6 +181,13 @@ module.exports = {
    */
   router: {
     middleware: 'i18n'
+  },
+  /**
+   * process.env
+   */
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    fbApi: process.env.FB_API || '2008683959352956'
   },
   /*
   ** Build configuration
