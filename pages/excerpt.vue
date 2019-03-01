@@ -1,28 +1,24 @@
 <template>
   <v-layout row wrap align-center>
-
     <v-flex xs12 text-xs-center>
-      <h1 class="extraits-title" v-html="$t('Excerpt.title')">
-      </h1>
+      <h1 class="extraits-title" v-html="$t('Excerpt.title')"></h1>
     </v-flex>
 
-      <v-flex xs12 md10 offset-md1>
+    <v-flex xs12 md10 offset-md1>
       <transition name="mcScale" appear mode="in-out">
       <v-card color="transparent">
         <v-responsive id="livre-bougie" height="200px"></v-responsive>
-
-          <v-card-title>
-            <h1 class="mb-2 light-blue--text">{{ $t('Excerpt.subTitle') }}</h1>
-          </v-card-title>
-
+        <v-card-title>
+          <h1 class="mb-2 light-blue--text">{{ $t('Excerpt.subTitle') }}</h1>
+        </v-card-title>
         <transition name="mcScale" appear mode="in-out">
-        <v-card-text primary-title>
+          <v-card-text primary-title>
             <div class="extraits extraits-first" v-html="$t('Excerpt.text')"></div>
-        </v-card-text>
+          </v-card-text>
         </transition>
         <v-card-actions>
           <v-layout>
-          <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
             <v-flex xs2>
             <v-btn
             small
@@ -30,24 +26,36 @@
             round
             @click.native="$router.go(-1)"
             v-t="'Button.back'"> </v-btn>
-          </v-flex>
-          <v-spacer></v-spacer>
-          <v-flex xs2>
-          <v-btn
-          small
-          round
-          href="https://www.editions-saint-honore.com/produit/gotiqvantica/"
-          target="_blank"
-          outline color="white"
-          v-t="'Button.buy'"></v-btn>
-          </v-flex>
-          <v-spacer></v-spacer>
+            </v-flex>
+            <v-spacer></v-spacer>
+            <v-flex xs2>
+            <v-btn
+            small
+            round
+            href="https://www.editions-saint-honore.com/produit/gotiqvantica/"
+            target="_blank"
+            outline color="white"
+            v-t="'Button.buy'"></v-btn>
+            </v-flex>
+            <v-spacer></v-spacer>
           </v-layout>
-
         </v-card-actions>
-           </v-card>
-           </transition>
+      </v-card>
+      </transition>
+    </v-flex>
+    <v-layout wrap>
+      <v-flex xs12 text-xs-center>
+        <h4>Partager la page du site</h4>
+        <div class="fb-like"
+        fb-like data-href="https://cathedrale-gothique.com/cathedrales-gothiques"
+        data-layout="button_count"
+        data-action="like"
+        data-size="large"
+        data-show-faces="true"
+        data-share="true"
+        ></div>
       </v-flex>
+    </v-layout>
   </v-layout>
 </template>
 

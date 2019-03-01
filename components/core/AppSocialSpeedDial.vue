@@ -41,9 +41,6 @@
       <network network="facebook">
         <v-icon v-text="'$vuetify.icons.facebook'" /> Facebook
       </network>
-      <network network="instagram">
-         <v-icon v-text="'$vuetify.icons.instagram'" /> Instagram
-      </network>
       <network network="twitter">
         <v-icon v-text="'$vuetify.icons.twitter'" /> Twitter
       </network>

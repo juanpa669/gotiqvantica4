@@ -7,20 +7,6 @@
       <v-container>
         <AppPurchaseDialog :dialog="dialog" :product="product" @onCloseDialog="onCloseDialog"></AppPurchaseDialog>
         <nuxt />
-        <no-ssr>
-          <v-layout>
-            <v-flex xs12 text-xs-center pa-4>
-              <div class="fb-like"
-              fb-like data-href="https://www.facebook.com/Rinarce/"
-              data-layout="button_count"
-              data-action="like"
-              data-size="large"
-              data-show-faces="true"
-              data-share="true"
-              ></div>
-            </v-flex>
-          </v-layout>
-          </no-ssr>
       </v-container>
     </v-content>
 
@@ -61,7 +47,7 @@
     head () {
       return {
         meta: [
-          { property: 'fb:app_id', content: '2008683959352956' }
+          { hid: 'fb:app_id', property: 'fb:app_id', content: '2008683959352956' }
         ]
       }
     },

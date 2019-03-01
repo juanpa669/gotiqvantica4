@@ -62,7 +62,11 @@ v-container(grid-list-xs)
               :error-messages="errors.collect('contact.comment')"
               color="white"
               )
-
+              input(
+                type="hidden"
+                name="access"
+                value="secret"
+              )
               v-text-field(
               height="32"
               :label="$t('Form.humanTest')"
@@ -133,7 +137,7 @@ export default {
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.cathedrale-gothique.com' },
+        { property: 'og:url', content: 'https://cathedrale-gothique.com' },
         { property: 'og:description', content: this.$t('Contact.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },

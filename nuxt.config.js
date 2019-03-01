@@ -39,7 +39,9 @@ module.exports = {
         src: 'https://connect.facebook.net/fr_FR/sdk.js',
         defer: true
       },
-      { src: './js/fb-sdk.js' }
+      {
+        src: 'https://cathedrale-gothique.com/js/fb-sdk.js'
+      }
     ],
     link: [
       { rel: 'canonical', href: 'https://cathedrale-gothique.com' },
@@ -52,11 +54,11 @@ module.exports = {
     // vuetify
     '~/plugins/vuetify.js',
     // EventBus
-    '~/plugins/bus.js',
+    '~/plugins/bus.client.js',
     // Core components
     '~/plugins/core-components.js',
     // Social component
-    '~/plugins/social.js',
+    // '~/plugins/social.js',
     // Vue Snotify notifications
     '~/plugins/snotify.js'
     // font awesome icons

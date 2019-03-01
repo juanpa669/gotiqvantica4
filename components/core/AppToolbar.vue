@@ -5,9 +5,9 @@
         v-icon shopping_cart
     AppLanguagesSelect(@localeChanged="onLocaleChange")
     v-btn(right icon @click.native="onAudioToggle")
-        v-icon(v-show="playmusic") pause_circle_outline
-        v-icon(v-show="!playmusic") play_circle_outline
-    AppSocialSpeedDial
+      v-icon(v-show="playmusic") pause_circle_outline
+      v-icon(v-show="!playmusic") play_circle_outline
+      v-spacer
 </template>
 <script>
   import AppSocialSpeedDial from './AppSocialSpeedDial'

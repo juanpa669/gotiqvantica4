@@ -21,7 +21,7 @@ v-container(fluid grid-list-xs)
               )
             v-flex(xs12 text-xs-center pa-4)
               div.fb-like(
-              fb-like data-href="https://www.facebook.com/Rinarce/"
+              fb-like data-href="https://cathedrale-gothique.com/cathedrales-gothiques"
               data-layout="button_count"
               data-action="like"
               data-size="large"
@@ -51,6 +51,22 @@ v-container(fluid grid-list-xs)
                   target="_blank"
                 ) {{ $t('Button.buy') }}
                 v-spacer
+  v-layout.wrap
+    v-flex(
+      xs12
+      text-xs-center
+      pa-4
+      )
+        h4 Partager la page Facebook
+        div(
+          class="fb-like"
+          fb-like data-href="https://www.facebook.com/Rinarce/"
+          data-layout="button_count"
+          data-action="like"
+          data-size="large"
+          data-show-faces="true"
+          data-share="true"
+          )
 
 </template>
 

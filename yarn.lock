@@ -836,6 +836,12 @@
   dependencies:
     dotenv "^6.0.0"
 
+"@nuxtjs/google-analytics@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.1.0.tgz#f00d0429baf149b57477931a4a1860e430376f1d"
+  dependencies:
+    vue-analytics "^5.16.2"
+
 "@nuxtjs/sitemap@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-0.2.0.tgz#a3bb2bef6f697f3603dc121511990e17c19a6797"
@@ -6564,6 +6570,10 @@ vm2@^3.5.0:
 void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
+
+vue-analytics@^5.16.2:
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.2.tgz#37724aeec71bb830b1cf2d52a969cf190ef120c1"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"

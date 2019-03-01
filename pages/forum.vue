@@ -48,10 +48,10 @@
                     v-card-title.primary-title
                       v-layout(wrap align-content-end)
                         v-flex
-                          h4 {{comment.message}}
+                          p {{comment.message}}
 
                         v-flex.xs12.headline.yellow--text.text-xs-right
-                          h5 {{ comment.author }}
+                          span {{ comment.author }}
 
                     v-card-actions
                       social-sharing(
@@ -73,6 +73,22 @@
                             color="light-blue"
                           )
                             v-icon share
+    v-layout.wrap.fb
+      v-flex(
+        xs12
+        text-xs-center
+        pa-4
+        )
+        h4 Partager la page Facebook
+        div(
+          class="fb-like"
+          fb-like data-href="https://www.facebook.com/Rinarce/"
+          data-layout="button_count"
+          data-action="like"
+          data-size="large"
+          data-show-faces="true"
+          data-share="true"
+          )
 </template>
 <script>
 import comments from '@/locales/comments'
@@ -119,6 +135,9 @@ export default {
 }
 </script>
 <style scoped>
+  h4, span {
+    font-family: papyrus;
+  }
   #main-forum {
     background-image: url('/img/main/contact/chevalier.png')!important;
     background-position: 0 0;
@@ -134,6 +153,8 @@ export default {
      font-family: papyrus;
      font-size: x-large;
      font-weight: 900;
-
+   }
+   .fb {
+     z-index: 100;
    }
 </style>

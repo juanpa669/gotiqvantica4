@@ -21,6 +21,22 @@
 
           v-flex(xs12 text-xs-center mt-4 key="buttonWrapper")
             h3(v-t="'Editor.imgClick'" key="message")
+    v-layout.wrap
+      v-flex(
+        xs12
+        text-xs-center
+        pa-4
+        )
+          h4 Partager la page Facebook
+          div(
+            class="fb-like"
+            fb-like data-href="https://www.facebook.com/Rinarce/"
+            data-layout="button_count"
+            data-action="like"
+            data-size="large"
+            data-show-faces="true"
+            data-share="true"
+            )
 </template>
 
 <script>

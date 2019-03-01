@@ -26,7 +26,7 @@
               :key="card.title"
               v-bind="[{ [`xs${card.flex}`]: true, [`lg${card.flex/card.ratio}`]: true }]"
             >
-              <v-card nuxt :to="localePath(card.url)">
+              <v-card nuxt :to="localePath(card.url)" @click.native="onCardClick(card.id)">
                 <v-img
                   :src="card.src"
                   height="275px"
@@ -46,7 +46,8 @@
                   </v-container>
                 </v-img>
                 <v-card-actions>
-                  <v-spacer></v-spacer>
+                <v-spacer></v-spacer>
+                <v-flex v-if="card.id !== 4">
                   <v-btn icon>
                     <v-icon>favorite</v-icon>
                   </v-btn>
@@ -56,6 +57,17 @@
                   <v-btn icon>
                     <v-icon>share</v-icon>
                   </v-btn>
+                </v-flex>
+                <v-flex v-else>
+                  <div class="fb-like"
+                    fb-like data-href="https://www.facebook.com/Rinarce/"
+                    data-layout="button_count"
+                    data-action="like"
+                    data-size="large"
+                    data-show-faces="true"
+                    data-share="true"
+                    ></div>
+                </v-flex>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -66,6 +78,19 @@
     </v-flex>
   </v-layout>
 <!-- ********** template ******************* -->
+            <v-layout wrap>
+            <v-flex xs12 text-xs-center pa-4>
+              <h4>Partager la page du site</h4>
+              <div class="fb-like"
+              fb-like data-href="https://cathedrale-gothique.com"
+              data-layout="button_count"
+              data-action="like"
+              data-size="large"
+              data-show-faces="true"
+              data-share="true"
+              ></div>
+            </v-flex>
+          </v-layout>
 </v-container>
 </template>
 <script>
@@ -79,9 +104,10 @@ export default {
   },
   data: () => ({
     cards: [
-      { title: 'Rina Sestito Arce', src: '/img/main/contact/chevalier.png', flex: 12, textcolor: 'white', url: 'author', ratio: 1 },
-      { title: 'Gotiqvantica', src: '/img/main/book/livre-320w.jpg', flex: 12, textcolor: 'white', url: 'gotiqvantica', ratio: 2 },
-      { title: 'Le retable d’Issenheim', src: '/img/main/book/retable.png', flex: 12, textcolor: 'white', url: 'retable', ratio: 2 }
+      { id: 1, title: 'Rina Sestito Arce', src: '/img/main/contact/chevalier.png', flex: 12, textcolor: 'white', url: 'author', ratio: 1 },
+      { id: 2, title: 'Gotiqvantica', src: '/img/main/book/livre-320w.jpg', flex: 12, textcolor: 'white', url: 'gotiqvantica', ratio: 2 },
+      { id: 3, title: 'Le retable d’Issenheim', src: '/img/main/book/retable.png', flex: 12, textcolor: 'white', url: 'retable', ratio: 2 },
+      { id: 4, title: 'Rejoignez-nous sur Facebook', src: '/img/main/summary/livrecoeur-768.jpg', flex: 12, textcolor: 'white', url: 'index', ratio: 1 }
     ]
   }),
   head () {
@@ -98,9 +124,9 @@ export default {
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.cathedrale-gothique.com' },
+        { property: 'og:url', content: 'https://cathedrale-gothique.com' },
         { property: 'og:description', content: this.$t('Home.meta.description') },
-        { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
+        { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/summary/livrecoeur-768.jpg' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' }
       ]
@@ -114,6 +140,13 @@ export default {
   methods: {
     onClick () {
       this.$store.commit('toggleDrawer')
+    },
+    onCardClick (id) {
+      if (id === 4) {
+        if (confirm('Voulez-vous vous rendre sur la page Facebook ?')) {
+          window.location = 'https://www.facebook.com/Rinarce/'
+        }
+      }
     }
   }
 }
@@ -126,5 +159,9 @@ export default {
   .headline {
     background-color:rgba(0,0,0,.5);
     padding: 10px;
+  }
+  span {
+    font-family: papyrus!important;
+    border-radius: 50px;
   }
 </style>

@@ -8,7 +8,7 @@
          small {{ $t('Footer.website') }} &copy;
       v-flex(xs12 md4  mt-1 id="music")
         small ♫ A. Michel &nbsp; &copy;
-          a(href='https://zen-waves.com/') https://zen-waves.com
+          a(href='https://www.mental-waves.com/') https://www.mental-waves.com/
     audio(id="player" controls loop muted autoplay)
       source(src="https://cathedrale-gothique.com/media/wave.ogg" type="audio/ogg")
       source(src="https://cathedrale-gothique.com/media/wave.mp3" type="audio/mpeg")
@@ -71,4 +71,7 @@ audio {
   }
 }
 
+a {
+  text-decoration: none;
+}
 </style>
