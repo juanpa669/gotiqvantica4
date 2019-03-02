@@ -61,15 +61,16 @@
         pa-4
         )
           h4 Partager la page Facebook
-          div(
-            class="fb-like"
-            fb-like data-href="https://www.facebook.com/Rinarce/"
-            data-layout="button_count"
-            data-action="like"
-            data-size="large"
-            data-show-faces="true"
-            data-share="true"
-            )
+          no-ssr
+            div(
+              class="fb-like"
+              fb-like data-href="https://www.facebook.com/Rinarce/"
+              data-layout="button_count"
+              data-action="like"
+              data-size="large"
+              data-show-faces="true"
+              data-share="true"
+              )
 
 </template>
 
@@ -99,7 +100,7 @@ export default {
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:title', content: this.$t('Home.mainTitle') },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://cathedrale-gothique.com' },
+        { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}/` },
         { property: 'og:description', content: this.$t('Author.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },
@@ -110,7 +111,9 @@ export default {
   computed: {
     year: _ => new Date().getFullYear()
   },
-
+  mounted () {
+    this.$initFbSDK()
+  },
   methods: {
     animeJS: (el, done) => {
       el.animate(

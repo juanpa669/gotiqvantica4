@@ -122,9 +122,9 @@ export default {
         { name: 'twitter:title', content: this.$t('Home.meta.title') },
         { name: 'twitter:description', content: this.$t('Home.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { property: 'og:title', content: this.$t('Home.mainTitle') },
+        { property: 'og:title', content: this.$t('Home.siteTitle') },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://cathedrale-gothique.com' },
+        { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}/` },
         { property: 'og:description', content: this.$t('Home.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/summary/livrecoeur-768.jpg' },
         { property: 'og:image:width', content: '1200' },
@@ -136,6 +136,9 @@ export default {
     ...mapGetters({
       currentLocale: 'currentLocale'
     })
+  },
+  mounted () {
+    this.$initFbSDK()
   },
   methods: {
     onClick () {

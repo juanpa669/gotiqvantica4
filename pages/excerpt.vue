@@ -77,7 +77,7 @@ export default {
         { name: 'twitter:title', content: this.$t('Excerpt.meta.title') },
         { name: 'twitter:description', content: this.$t('Excerpt.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { property: 'og:url', content: 'https://www.cathedrale-gothique.com/extraits' },
+        { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}/` },
         { property: 'og:description', content: this.$t('Excerpt.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
         { property: 'og:image:width', content: '1200' },
@@ -86,6 +86,9 @@ export default {
         { property: 'og:type', content: 'website' }
       ]
     }
+  },
+  mounted () {
+    this.$initFbSDK()
   }
 }
 </script>

@@ -38,7 +38,7 @@
             h4 Partager la page
             div(
               class="fb-like"
-              fb-like data-href="https://cathedrale-gothique.com/retable"
+              fb-like data-href="https://cathedrale-gothique.com/le-retable-d-issenheim"
               data-layout="button_count"
               data-action="like"
               data-size="large"
@@ -69,7 +69,7 @@ export default {
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:title', content: this.$t('Retable.meta.title') },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}` },
+        { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}/` },
         { property: 'og:description', content: this.$t('Retable.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
         { property: 'og:image:width', content: '1200' },
@@ -86,6 +86,9 @@ export default {
         fnacUrl: 'https://livre.fnac.com/a13288728/Rina-Sestito-Arce-Le-retable-d-Issenheim'
       }
     }
+  },
+  mounted () {
+    this.$initFbSDK()
   },
   methods: {
     purchase () {

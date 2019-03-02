@@ -58,7 +58,7 @@ module.exports = {
     // Core components
     '~/plugins/core-components.js',
     // Social component
-    // '~/plugins/social.js',
+    '~/plugins/fb-plugin.client.js',
     // Vue Snotify notifications
     '~/plugins/snotify.js'
     // font awesome icons
