@@ -6,7 +6,50 @@ const fr = require('./locales/fr.json')
 const de = require('./locales/de.json')
 const es = require('./locales/es.json')
 const it = require('./locales/it.json')
-const routes = ['/accueil', '/cathedrales-gothiques', '/auteur', '/extraits', '/forum', '/contact', '/editeur', '/le-retable-d-issenheim', '/en/home', '/en/gotiqvantica', '/en/author', '/en/excerpt', '/en/forum', '/en/contact', '/en/publisher', '/en/le-retable-d-issenheim', '/fr', '/fr/cathedrales-gothiques', '/fr/auteur', '/fr/extraits', '/fr/forum', '/fr/contact', '/fr/editeur', '/fr/le-retable-d-issenheim', '/de', '/de/cathedrales-gothiques', '/de/author', '/de/excerpt', '/de/forum', '/de/contact', '/de/publisher', '/de/le-retable-d-issenheim', '/it', '/it/cathedrales-gothiques', '/it/author', '/it/excerpt', '/it/forum', '/it/contact', '/it/publisher', '/it/le-retable-d-issenheim', '/es', '/es/cathedrales-gothiques', '/es/author', '/es/excerpt', '/es/forum', '/es/contact', '/es/publisher', '/es/le-retable-d-issenheim']
+const routes = [
+  '/accueil',
+  '/cathedrales-gothiques',
+  '/auteur',
+  '/extraits',
+  '/forum',
+  '/contact',
+  '/editeur',
+  '/le-retable-d-issenheim',
+  '/en',
+  '/en/gotiqvantica',
+  '/en/author',
+  '/en/excerpt',
+  '/en/forum',
+  '/en/contact',
+  '/en/publisher',
+  '/en/le-retable-d-issenheim',
+  '/de',
+  '/de/gotiqvantica',
+  '/de/author',
+  '/de/Auszug',
+  '/de/forum',
+  '/de/kontakt',
+  '/de/publisher',
+  '/de/erratum',
+  '/de/le-retable-d-issenheim',
+  '/it',
+  '/it/gotiqvantica',
+  '/it/autore',
+  '/it/estratto',
+  '/it/publisher',
+  '/it/forum',
+  '/it/contatto',
+  '/it/erratum',
+  '/it/le-retable-d-issenheim',
+  '/es',
+  '/es/gotiqvantica',
+  '/es/author',
+  '/es/extracto',
+  '/es/forum',
+  '/es/contactar',
+  '/es/publisher',
+  '/es/erratum',
+  '/es/le-retable-d-issenheim']
 const siteMapRoutes = function () {
   return routes.map((currRoute) => {
     return (
@@ -14,7 +57,7 @@ const siteMapRoutes = function () {
         url: currRoute,
         changefreq: 'daily',
         priority: 1,
-        lastmodISO: '2019-02-27T19:43:00.000Z'
+        lastmodISO: '2019-03-04T21:25:00.000Z'
       }
     )
   })

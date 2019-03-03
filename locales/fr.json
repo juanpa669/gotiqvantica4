@@ -98,13 +98,14 @@
     }
   },
   "Editor": {
-    "title": "Page de l'éditeur",
+    "title": "Editions St Honoré - Paris",
     "purchase": "Cliquez pour commander",
     "imgClick": "Cliquez sur l'image pour être rediriger vers la page de l'éditeur",
+    "text": "<p>Mes ouvrages, <a href=\"http://www.editions-saint-honore.com/produit/gotiqvantica/\" class=\"textEditor\">Gotiqvantica</a> et <a href=\"http://www.editions-saint-honore.com/produit/le-retable-dissenheim-grimoire-alchimique-pour-compostelle/\"  class=\"textEditor\">Le Retable d'Issenheim, grimoire alchimique pour Compostelle</a> ont été publié aux éditions St Honoré Paris. Voici les liens pour vous rendre sur la page de l'éditeur dédiée à chacun de ces livres.</p><p>Pensez à partager sur Facebook les pages du site ou ma <a href=\"https://facebook.com/Rinarce\">Page Facebook</a>  si vous avez aimé ou tout simplement pour faire connaitre mes livres à vos amis. Vous pouvez également venir échanger via la page Facebook sur les thèmes abordés par les livres je me ferais un plaisir à répondre à vos questions ou de débattre sur un point qui vous tient à coeur.</p>",
     "meta": {
       "title": "Edition St Honoré Paris - GOTIQVANTICA et Retable d'Issenheim par Rina Sestito Arce",
-      "description": "Gotiqvantica, le secret des cathédrales gothiques. Un livre alliant ésotérisme, physique quantité, alchimie, et quête du Graal.",
-      "keywords": "cathédrale gothique, retable, issenheim, livre, rina sestito arce, ésotérique"
+      "description": "Page du site consacrée à l'éditeur St Honoré Paris où ont été publié, Gotiqvantica, le secret des cathédrales gothiques et Le Retable d'Issenheim, grimoire alchimique pour Compostelle.. Ces livres traitent de cathédrales gothiques, d'ésotérisme, d'alchimie, de Compostelle, du divin et quête du Graal, de l'art gothique dans l'architecture.",
+      "keywords": "Editions St Honoré, livres, art gothique, Gotiqvantica, cathédrale gothique, retable, issenheim, compostelle, rina sestito arce, ésotérique"
     }
   },
   "Forum": {
@@ -179,6 +180,7 @@
     "save": "Sauvegarder",
     "valid": "Valider",
     "video": "Vidéo",
+    "explore": "Visiter",
     "purchaseDialog": "Acheter chez l\"éditeur",
     "selectCountry": "Sélectionner une langue",
     "contactAuthor": "Contact",
@@ -217,9 +219,11 @@
   "socialShare": "Share",
   "translation": "Translated by ",
   "updateTxt": "New content! Please reload the page or close and open your browser again to load the new content!",
+  "gotiqvanticaShort": "Dans cet ouvrage sont citées différentes cathédrales gothiques européennes pour illustrer ce langage ésotérique fait de symboles, de géométrie, de statuaire, de proportions ou d’orientation. Et il se trouve que ce langage provient de savoirs de civilisations anciennes, en particulier celtique, égyptienne, hébraïque, grecque, soufie ou hindoue. Du coup, la dimension spirituelle de la cathédrale gothique présente des analogies avec des sites mondialement connus comme la pyramide de Gizeh ou Stonehenge.",
+  "retableShort": "Sur le chemin de pèlerinage, le retable d’Issenheim est souvent présenté comme un exemple de maîtrise artistique au service de l’enseignement religieux de l’Église chrétienne. Cependant, selon l’auteure ce retable présente « des détails » à double lecture suggérant aussi une dimension ésotérique. L’approche proposée est absolument innovante, parfois déroutante, mais toujours cohérente. Avec des mots simples, l’auteure questionne, propose et finalement révèle que ce retable est aussi une ordonnance alchimique au point de le considérer davantage comme une œuvre spirituelle que religieuse. L’enseignement peint sur ce retable montrerait une autre image de Jésus et de sa mission christique, Marie-Madeleine serait présentée comme l’apôtre des apôtres.",
   "Footer": {
     "design": "Design Francesco LOIARRO",
-    "website": "J-Yves HENQUEZ"
+    "website": "Website J-Yves HENQUEZ"
   },
   "Errors": {
     "title-404": "Perdu au confin de l'univers ?",
