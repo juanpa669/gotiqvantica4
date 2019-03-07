@@ -29,7 +29,7 @@
               :to="localePath({name: item.name},$i18n.locale)"
               ripple
               active-class="mc-active-class"
-              :class="{'specialLinks': item.name === 'retable' || item.name === 'gotiqvantica'}"
+              :class="{'specialLinks': item.name === 'le-retable-d-issenheim' || item.name === 'cathedrales-gothiques'}"
             )
               v-list-tile-action
                 v-icon {{ item.icon }}

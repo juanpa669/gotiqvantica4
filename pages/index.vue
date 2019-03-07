@@ -105,8 +105,8 @@ export default {
   data: () => ({
     cards: [
       { id: 1, title: 'Rina Sestito Arce', src: '/img/main/contact/chevalier.png', flex: 12, textcolor: 'white', url: 'author', ratio: 1 },
-      { id: 2, title: 'Gotiqvantica', src: '/img/main/book/livre-320w.jpg', flex: 12, textcolor: 'white', url: 'gotiqvantica', ratio: 2 },
-      { id: 3, title: 'Le retable d’Issenheim', src: '/img/main/book/retable.png', flex: 12, textcolor: 'white', url: 'retable', ratio: 2 },
+      { id: 2, title: 'Gotiqvantica', src: '/img/main/book/livre-320w.jpg', flex: 12, textcolor: 'white', url: 'cathedrales-gothiques', ratio: 2 },
+      { id: 3, title: 'Le retable d’Issenheim', src: '/img/main/book/retable.png', flex: 12, textcolor: 'white', url: 'le-retable-d-issenheim', ratio: 2 },
       { id: 4, title: 'Rejoignez-nous sur Facebook', src: '/img/main/summary/livrecoeur-768.jpg', flex: 12, textcolor: 'white', url: 'index', ratio: 1 }
     ]
   }),
@@ -117,14 +117,14 @@ export default {
         { hid: 'description', name: 'description', content: this.$t('Home.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Home.meta.keywords') },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@juanpa' },
-        { name: 'twitter:creator', content: '@Rina' },
+        { name: 'twitter:site', content: 'https://cathedrale-gothique.com' },
+        { name: 'twitter:creator', content: '@Rinarce' },
         { name: 'twitter:title', content: this.$t('Home.meta.title') },
         { name: 'twitter:description', content: this.$t('Home.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { property: 'og:title', content: this.$t('Home.siteTitle') },
+        { property: 'og:title', content: this.$t('Home.cardTitle') },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}/` },
+        { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}` },
         { property: 'og:description', content: this.$t('Home.meta.description') },
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/summary/livrecoeur-768.jpg' },
         { property: 'og:image:width', content: '1200' },

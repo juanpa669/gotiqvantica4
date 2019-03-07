@@ -63,12 +63,12 @@ export default {
         { hid: 'description', name: 'description', content: this.$t('Editor.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Editor.meta.keywords') },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@juanpa' },
-        { name: 'twitter:creator', content: '@Rina' },
+        { name: 'twitter:site', content: 'https://cathedrale-gothique.com' },
+        { name: 'twitter:creator', content: '@Rinarce' },
         { name: 'twitter:title', content: this.$t('Editor.meta.title') },
         { name: 'twitter:description', content: this.$t('Editor.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
-        { property: 'og:title', content: this.$t('Home.mainTitle') },
+        { property: 'og:title', content: this.$t('Home.meta.title') },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: `https://cathedrale-gothique.com${this.$route.fullPath}/` },
         { property: 'og:description', content: this.$t('Editor.meta.description') },
@@ -86,7 +86,7 @@ export default {
       this.$_bus.$emit('onPurchase')
     },
     goTo (product) {
-      window.open(`https://www.editions-saint-honore.com/produit/${product}`)
+      window.open(`http://www.editions-saint-honore.com/produit/${product}`)
     },
     onShare (product) {
       FB.ui({

@@ -9,8 +9,8 @@
       {
         "icon": "library_books",
         "title": "Gotiqvantica - Il Libro",
-        "to": "/gotiqvantica",
-        "name": "gotiqvantica"
+        "to": "/cathedrales-gothiques",
+        "name": "cathedrales-gothiques"
       },
       {
         "icon": "face",
@@ -51,8 +51,8 @@
       {
         "icon": "library_books",
         "title": "Le retable d’Issenheim",
-        "to": "/retable",
-        "name": "retable"
+        "to": "/le-retable-d-issenheim",
+        "name": "le-retable-d-issenheim"
       }
     ]
   },

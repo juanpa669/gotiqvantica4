@@ -32,7 +32,7 @@
             <v-btn
             small
             round
-            href="https://www.editions-saint-honore.com/produit/gotiqvantica/"
+            href="http://www.editions-saint-honore.com/produit/gotiqvantica/"
             target="_blank"
             outline color="white"
             v-t="'Button.buy'"></v-btn>
@@ -72,8 +72,8 @@ export default {
         { hid: 'description', name: 'description', content: this.$t('Excerpt.meta.description') },
         { hid: 'keywords', name: 'keywords', content: this.$t('Excerpt.meta.keywords') },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@juanpa' },
-        { name: 'twitter:creator', content: '@Rina' },
+        { name: 'twitter:site', content: 'https://cathedrale-gothique.com' },
+        { name: 'twitter:creator', content: '@Rinarce' },
         { name: 'twitter:title', content: this.$t('Excerpt.meta.title') },
         { name: 'twitter:description', content: this.$t('Excerpt.meta.description') },
         { name: 'twitter:image', content: 'https://cathedrale-gothique.com/img/main/book/retable.png' },
@@ -82,7 +82,7 @@ export default {
         { property: 'og:image', content: 'https://cathedrale-gothique.com/img/main/book/livre-fb.jpg' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:title', content: this.$t('Home.mainTitle') },
+        { property: 'og:title', content: this.$t('Home.meta.title') },
         { property: 'og:type', content: 'website' }
       ]
     }

@@ -45,10 +45,16 @@
       }
     },
     head () {
+      // let canonical = `https://cathedrale-gothique.com${this.$route.path}`
       return {
         meta: [
           { hid: 'fb:app_id', property: 'fb:app_id', content: '2008683959352956' }
-        ]
+        ] /* ,
+        link: [{
+          hid: 'canonical',
+          rel: 'canonical',
+          href: canonical
+        }] */
       }
     },
     mixins: [addSnotify],

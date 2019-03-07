@@ -6,6 +6,7 @@ const fr = require('./locales/fr.json')
 const de = require('./locales/de.json')
 const es = require('./locales/es.json')
 const it = require('./locales/it.json')
+const curDate = new Date().toISOString()
 const routes = [
   '/accueil',
   '/cathedrales-gothiques',
@@ -57,7 +58,7 @@ const siteMapRoutes = function () {
         url: currRoute,
         changefreq: 'daily',
         priority: 1,
-        lastmodISO: '2019-03-04T21:25:00.000Z'
+        lastmodISO: curDate
       }
     )
   })
@@ -87,7 +88,6 @@ module.exports = {
       }
     ],
     link: [
-      { rel: 'canonical', href: 'https://cathedrale-gothique.com' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.13/css/all.css' }
@@ -125,6 +125,7 @@ module.exports = {
       // regular vee-validate options
     }],
     ['nuxt-i18n', {
+      baseUrl: 'https://cathedrale-gothique.com',
       parsePages: false,
       locales: [
         { code: 'en', iso: 'en-US', file: en },
@@ -154,12 +155,12 @@ module.exports = {
           de: '/',
           it: '/'
         },
-        gotiqvantica: {
-          en: '/gotiqvantica',
+        cathedralesGothiques: {
+          en: '/cathedrales-gothiques',
           fr: '/cathedrales-gothiques',
-          es: '/gotiqvantica',
-          de: '/gotiqvantica',
-          it: '/gotiqvantica'
+          es: '/cathedrales-gothiques',
+          de: '/cathedrales-gothiques',
+          it: '/cathedrales-gothiques'
         },
         author: {
           en: '/author',
@@ -189,7 +190,7 @@ module.exports = {
           de: '/kontakt',
           it: '/contatto'
         },
-        retable: {
+        leRetableDIssenheim: {
           en: '/le-retable-d-issenheim',
           fr: '/le-retable-d-issenheim',
           es: '/le-retable-d-issenheim',
@@ -199,19 +200,6 @@ module.exports = {
       },
       encodePaths: false,
       seo: true
-    /*  vuex: {
-        // Module namespace
-        moduleName: 'i18n',
-        // Mutations config
-        mutations: {
-          // Mutation to commit to store current locale, set to false to disable
-          setLocale: 'setLocale',
-          // Mutation to commit to store current message, set to false to disable
-          setMessages: 'setMessages'
-        },
-        // PreserveState from server
-        preserveState: false
-      } */
     }]
   ],
   css: ['~/assets/style/app.styl'],
